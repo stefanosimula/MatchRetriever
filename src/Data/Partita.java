@@ -5,81 +5,55 @@ import java.util.Date;
 
 public class Partita {
 
-    private int ID;
+    private String ID;
 
-    private String SquadraA;
-    private String SquadraB;
+    int NumeroGara;
+    private Squadra SquadraA;
+    private Squadra SquadraB;
 
     private int PuntiA;
     private int PuntiB;
 
-    private String Arbitro1;
-    private String Arbitro2;
-    private String Arbitro3;
+    private Arbitro Arbitro1;
+    private Arbitro Arbitro2;
+    private Arbitro Arbitro3;
 
-    private String Campo;
-    private String Citta;
-    private String Provincia;
-    private String Regione;
+    private Campo Campo;
 
     private Date Data;
     private Time Ora;
 
     private String Sanzioni;
 
-    public void setID(int id) {
-        ID = id;
+    public Partita(int numeroGara, Squadra squadraA, Squadra squadraB, int puntiA, int puntiB,
+                   Campo campo, Date data, Time ora,
+                   Arbitro arbitro1, Arbitro arbitro2, Arbitro arbitro3) {
+
+        NumeroGara = numeroGara;
+
+        SquadraA = squadraA;
+        SquadraB = squadraB;
+
+        PuntiA = puntiA;
+        PuntiB = puntiB;
+
+        Campo = campo;
+
+        Data = data;
+        Ora = ora;
+
+        Arbitro1 = arbitro1;
+        Arbitro2 = arbitro2;
+        Arbitro3 = arbitro3;
+
+        ID = NumeroGara + "_" + SquadraA.getNome() + "_" + SquadraB.getNome() + "_" + Data + "_" + Ora;
     }
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setSquadraA(String squadraA) {
-        SquadraA = squadraA;
-    }
-
-    public String getSquadraA() {
-        return SquadraA;
-    }
-
-    public void setSquadraB(String squadraB) {
-        SquadraB     = squadraB;
-    }
-
-    public String getSquadraB() {
-        return SquadraB;
-    }
-
-    public void setPuntiA(int puntiA) {
-        PuntiA = puntiA;
-    }
-
-    public void setPuntiB(int puntiB) {
-        PuntiB = puntiB;
-    }
-
-    public void SetArbitro1(String arbitro1) {
-        Arbitro1 = arbitro1;
-    }
-
-    public void SetArbitro2(String arbitro2) {
-        Arbitro2 = arbitro2;
-    }
-
-    public void SetArbitro3(String arbitro3) {
-        Arbitro3 = arbitro3;
-    }
-
-    public void SetData(Date data) {
-        Data = data;
-    }
-
-    public void SetOra(Time ora) {
-        Ora = ora;
-    }
-
     public String toString() {
-        return "Partita N°"+ID+" Squadra A:"+SquadraA+" Squadra B:"+SquadraB;
+        return "Partita N°"+NumeroGara+" Squadra A:"+SquadraA+" Squadra B:"+SquadraB;
     }
 }

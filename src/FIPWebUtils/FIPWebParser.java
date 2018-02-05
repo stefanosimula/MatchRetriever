@@ -1,15 +1,15 @@
 package FIPWebUtils;
 
 import Data.Partita;
+import Data.Squadra;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class FIPWebParser {
 
@@ -19,6 +19,7 @@ public class FIPWebParser {
     private static String PunteggioSquadra1 = "risultato-squadra risultato-squadra-1";
     private static String PunteggioSquadra2 = "risultato-squadra risultato-squadra-2";
     private static String NumeroPartitaClass = "numero-partita";
+    private static String DataOraTag = "strong";
 
     public static ArrayList<Partita> ParseGetPartiteResult(String htmlGetPartiteResult) {
         ArrayList<Partita> matches = new ArrayList<Partita>();
@@ -28,6 +29,10 @@ public class FIPWebParser {
         Element table = doc.getElementById("table-risultati");
 
         Partita partita;
+        int numeroGara, puntiA, puntiB;
+        Squadra squadraA, squadraB;
+        Date data;
+        Time ora;
         Element row, row2;
 
         Elements rows = table.getElementsByTag("tr");
@@ -46,7 +51,6 @@ public class FIPWebParser {
                 row = rows.get(i);
             }
 
-            partita = new Partita();
 
             /*
             <td class="nome-squadra nome-squadra-1">ENIC PINO DRAGONS FIRENZE</td>
@@ -60,7 +64,7 @@ public class FIPWebParser {
             }
 
             Element teamANameCol = teamANameCols.get(0);
-            partita.setSquadraA(teamANameCol.text());
+            squadraA = new Squadra(teamANameCol.text());
 
             Elements teamAPointsCols = row.getElementsByClass(PunteggioSquadra1);
             if (teamAPointsCols.size() == 0) {
@@ -69,7 +73,7 @@ public class FIPWebParser {
             }
 
             Element teamAPointsCol = teamAPointsCols.get(0);
-            partita.setPuntiA(Integer.parseInt(teamAPointsCol.text()));
+            puntiA = Integer.parseInt(teamAPointsCol.text());
 
             /*
             <td class="risultato-squadra risultato-squadra-2">64</td>
@@ -83,7 +87,7 @@ public class FIPWebParser {
             }
 
             Element teamBNameCol = teamBNameCols.get(0);
-            partita.setSquadraB(teamBNameCol.text());
+            squadraB = new Squadra(teamBNameCol.text());
 
             Elements teamBPointsCols = row.getElementsByClass(PunteggioSquadra2);
             if (teamBNameCols.size() == 0) {
@@ -92,7 +96,7 @@ public class FIPWebParser {
             }
 
             Element teamBPointsCol = teamBPointsCols.get(0);
-            partita.setPuntiB(Integer.parseInt(teamBPointsCol.text()));
+            puntiB = Integer.parseInt(teamBPointsCol.text());
 
             row2 = rows.get(i + 1);
 
@@ -101,8 +105,7 @@ public class FIPWebParser {
              */
 
             Element matchNumberCol = row2.getElementsByClass(NumeroPartitaClass).get(0);
-            int matchNumber = Integer.parseInt(matchNumberCol.getElementsByTag("a").get(0).text());
-            partita.setID(matchNumber);
+            numeroGara = Integer.parseInt(matchNumberCol.getElementsByTag("a").get(0).text());
 
             /*
             <td class="luogo-arbitri" colspan="5">
@@ -111,9 +114,27 @@ public class FIPWebParser {
             </td>
              */
 
-            System.out.println("[ParseGetPartiteResult] SUCCESS - find: " + partita.toString());
+            Elements matchDateTimeCols = row2.getElementsByTag(DataOraTag);
+            if (matchDateTimeCols.size() == 0) {
+                System.out.println("[ParseGetPartiteResult] ERROR : not able to find: " + DataOraTag);
+                break;
+            }
+            String[] tmp = matchDateTimeCols.get(0).text().split(" - ");
+            String[] dataElems = tmp[0].split("-");
+            data = new Date(Integer.parseInt(dataElems[2]),
+                    Integer.parseInt(dataElems[1]),
+                    Integer.parseInt(dataElems[0]));
+
+            String[] timeElems = tmp[1].split(":");
+
+            ora = new Time(Integer.parseInt(timeElems[0]), Integer.parseInt(timeElems[1]), 0);
+
+            partita = new Partita(numeroGara, squadraA, squadraB, puntiA, puntiB, null,
+                    data, ora, null, null, null);
 
             matches.add(partita);
+
+            System.out.println("[ParseGetPartiteResult] Added: " + partita.toString());
         }
 
         return matches;
