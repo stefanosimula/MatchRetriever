@@ -19,6 +19,7 @@ public class FIPWebParser {
     private static String PunteggioSquadra1 = "risultato-squadra risultato-squadra-1";
     private static String PunteggioSquadra2 = "risultato-squadra risultato-squadra-2";
     private static String NumeroPartitaClass = "numero-partita";
+    private static String ArbitriClass = "luogo-arbitri";
     private static String DataOraTag = "strong";
 
     public static ArrayList<Partita> ParseGetPartiteResult(String htmlGetPartiteResult) {
@@ -113,6 +114,15 @@ public class FIPWebParser {
                 <br /><strong>27-01-2018 - 18:30</strong>
             </td>
              */
+            Elements refereesCols = row2.getElementsByClass(ArbitriClass);
+            if (refereesCols.size() == 0) {
+                System.out.println("[ParseGetPartiteResult] ERROR : not able to find: " + ArbitriClass);
+                break;
+            }
+
+            Element refereesCol = refereesCols.get(0);
+            String[] splits = refereesCol.text().split(" - ");
+
 
             Elements matchDateTimeCols = row2.getElementsByTag(DataOraTag);
             if (matchDateTimeCols.size() == 0) {

@@ -34,6 +34,23 @@ public class MatchRetriever {
         FIPWebParser.ParseGetPartiteResult(everything);
 
 
+        /*
+
+        for all Regioni
+            for all provincia in regione
+                for all comitato
+                    retrieve partite
+                    parsa risultato e ottieni le partite
+
+                    for all partite
+                        getPartitaDettaglio
+                            if(partita in DB)
+                                Aggiorna Partita
+                            else
+                                Inserisci partita nel DB
+
+         */
+
         System.out.println("***** MATCH RETRIEVER STOP *****");
     }
 }
