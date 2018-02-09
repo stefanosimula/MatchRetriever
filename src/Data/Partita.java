@@ -25,10 +25,12 @@ public class Partita {
 
     private String Sanzioni;
 
-    public Partita(int numeroGara, Squadra squadraA, Squadra squadraB, int puntiA, int puntiB,
+    public Partita(String regioneID, String comitatoID, String provinciaID, int numeroGara, Squadra squadraA, Squadra squadraB, int puntiA, int puntiB,
                    Campo campo, Date data, Time ora,
                    Arbitro arbitro1, Arbitro arbitro2, Arbitro arbitro3) {
 
+    	ID = regioneID + "_" + comitatoID + "_" + provinciaID + "_" + numeroGara;
+    	
         NumeroGara = numeroGara;
 
         SquadraA = squadraA;
@@ -44,9 +46,7 @@ public class Partita {
 
         Arbitro1 = arbitro1;
         Arbitro2 = arbitro2;
-        Arbitro3 = arbitro3;
-
-        ID = NumeroGara + "_" + SquadraA.getNome() + "_" + SquadraB.getNome() + "_" + Data + "_" + Ora;
+        Arbitro3 = arbitro3;       
     }
 
     public String getID() {
@@ -54,6 +54,6 @@ public class Partita {
     }
 
     public String toString() {
-        return "Partita NÂ°"+NumeroGara+" Squadra A:"+SquadraA+" Squadra B:"+SquadraB;
+        return "Partita N°"+NumeroGara+" Squadra A:"+SquadraA+" Squadra B:"+SquadraB;
     }
 }

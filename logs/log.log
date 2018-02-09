@@ -1,0 +1,7 @@
+17:44:18.763 [main] INFO  Logging.WPLogger - [Data.DataManager][LoadConf] Trying to load data configuration from file: [../conf/FIPWebREGIONI.json]
+17:44:18.779 [main] ERROR Logging.WPLogger - [Data.DataManager][LoadConf] FAILED - File not found exception : FILE [../conf/FIPWebREGIONI.json]
+17:44:18.780 [main] INFO  Logging.WPLogger - [Data.DataManager][LoadConf] Load data configuration complete
+17:45:13.880 [main] INFO  Logging.WPLogger - [Data.DataManager][LoadConf] Trying to load data configuration from file: [../conf/FIPWebREGIONI.json]
+17:45:13.895 [main] ERROR Logging.WPLogger - [Data.DataManager][LoadConf] FAILED - File not found exception : FILE [../conf/FIPWebREGIONI.json]
+17:45:13.895 [main] INFO  Logging.WPLogger - [Data.DataManager][LoadConf] Load data configuration complete
+17:45:36.745 [main] INFO  Logging.WPLogger - [Data.DataManager][LoadConf] Trying to load data configuration from file: [./conf/FIPWebREGIONI.json]

@@ -1,4 +1,4 @@
-package FIPWebUtils.Data;
+package Data;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,8 @@ public class Provincia {
     private ArrayList<Comitato> comitati;
 
     public Provincia(String nome) {
-        nome = nome;
+        this.nome = nome;
+        
         comitati = new ArrayList<>();
     }
 

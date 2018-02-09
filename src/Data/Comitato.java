@@ -1,4 +1,4 @@
-package FIPWebUtils.Data;
+package Data;
 
 public class Comitato {
     private String nome;

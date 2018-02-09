@@ -138,13 +138,14 @@ public class FIPWebParser {
             String[] timeElems = tmp[1].split(":");
 
             ora = new Time(Integer.parseInt(timeElems[0]), Integer.parseInt(timeElems[1]), 0);
-
+/*
             partita = new Partita(numeroGara, squadraA, squadraB, puntiA, puntiB, null,
                     data, ora, null, null, null);
 
             matches.add(partita);
 
             System.out.println("[ParseGetPartiteResult] Added: " + partita.toString());
+            */
         }
 
         return matches;
