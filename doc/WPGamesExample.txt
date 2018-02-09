@@ -1,0 +1,52 @@
+[  
+   {  
+      "id":2258,
+      "date":"2018-02-08T09:37:20",
+      "date_gmt":"2018-02-08T08:37:20",
+      "guid":{  
+         "rendered":"http:\/\/www.pisagap.it\/?post_type=games&#038;p=2258"
+      },
+      "modified":"2018-02-08T09:37:20",
+      "modified_gmt":"2018-02-08T08:37:20",
+      "slug":"bozza-automatica",
+      "status":"publish",
+      "type":"games",
+      "link":"http:\/\/www.pisagap.it\/games\/bozza-automatica\/",
+      "template":"",
+      "meta":[  
+
+      ],
+      "acf":{  
+         "squadra_a":"Squadra A"
+      },
+      "_links":{  
+         "self":[  
+            {  
+               "href":"http:\/\/www.pisagap.it\/wp-json\/wp\/v2\/games\/2258"
+            }
+         ],
+         "collection":[  
+            {  
+               "href":"http:\/\/www.pisagap.it\/wp-json\/wp\/v2\/games"
+            }
+         ],
+         "about":[  
+            {  
+               "href":"http:\/\/www.pisagap.it\/wp-json\/wp\/v2\/types\/games"
+            }
+         ],
+         "wp:attachment":[  
+            {  
+               "href":"http:\/\/www.pisagap.it\/wp-json\/wp\/v2\/media?parent=2258"
+            }
+         ],
+         "curies":[  
+            {  
+               "name":"wp",
+               "href":"https:\/\/api.w.org\/{rel}",
+               "templated":true
+            }
+         ]
+      }
+   }
+]
