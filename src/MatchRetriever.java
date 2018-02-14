@@ -1,28 +1,16 @@
-import FIPWebUtils.FIPWebHelper;
-import FIPWebUtils.FIPWebParser;
-import Utils.Utils;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
 
-import Data.Comitato;
-import Data.DataManager;
-import Data.Provincia;
-import Data.Regione;
+import WPUtils.WPUtils;
 
 public class MatchRetriever {
 	
     public static void main(String[] args) throws IOException {
         System.out.println("***** MATCH RETRIEVER START *****");
-
+/*
         DataManager dataManager = new DataManager();
         List<Regione> regioni = dataManager.InitializeData();
         
-        Iterator regIt = regioni.iterator();
+        Iterator<Regione> regIt = regioni.iterator();
         while(regIt.hasNext()) {
             Regione regione = (Regione) regIt.next();
             
@@ -40,6 +28,15 @@ public class MatchRetriever {
             }
         }
                
+        */
+        //WPUtils.SaveGame(1243, "","");
+        
+        try {
+			WPUtils.SaveGame(1324, "", "");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         /*
         for all Regioni

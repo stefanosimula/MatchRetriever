@@ -2,201 +2,201 @@
    {  
       "name": "Abruzzo",
       "IDRegione":"AB",
-      "Comitato":{  
-         "IDComitato":"RAB"
-      },
-      "Province":{  
-         "IDProvincia":"PE"
-      }
+      "Comitato":[ 
+         {"IDComitato":"RAB"}
+      ],
+      "Province":[
+         {"IDProvincia":"PE"}
+      ]
    },
    {  
       "name": "Basilicata",
       "IDRegione":"BA",
-      "Comitato":{  
-               "IDComitato":"RBA"
-      },
-      "Province":{  
-         "IDProvincia":"PZ"
-      }
+      "Comitato":[ 
+               {"IDComitato":"RBA"}
+      ],
+      "Province":[
+         {"IDProvincia":"PZ"}
+      ]
    },
    {  
       "name": "Calabria",
       "IDRegione":"CA",
-      "Comitato":{  
-               "IDComitato":"RCA"
-      },
-      "Province":{  
-         "IDProvincia":"RC"
-      }
+      "Comitato":[ 
+               {"IDComitato":"RCA"}
+      ],
+      "Province":[
+         {"IDProvincia":"RC"}
+      ]
    },
    {  
       "name": "Campania",
       "IDRegione":"CM",
-      "Comitato":{  
-                     "IDComitato":"RCM"
-      },
-      "Province":{  
-         "IDProvincia":"NA"
-      }
+      "Comitato":[ 
+                     {"IDComitato":"RCM"}
+      ],
+      "Province":[
+         {"IDProvincia":"NA"}
+      ]
    },
    {  
       "name": "Emilia Romagna",
       "IDRegione":"EM",
-      "Comitato":{  
-                           "IDComitato":"REM"
-      },
-      "Province":{  
-         "IDProvincia":"BO"
-      }
+      "Comitato":[ 
+                           {"IDComitato":"REM"}
+      ],
+      "Province":[
+         {"IDProvincia":"BO"}
+      ]
    },
    {  
       "name": "Friuli Venezia Giulia",
       "IDRegione":"FR",
-      "Comitato":{  
-                                 "IDComitato":"RFR"
-      },
-      "Province":{  
-         "IDProvincia":"TS"
-      }
+      "Comitato":[ 
+        {"IDComitato":"RFR"}
+      ],
+      "Province":[
+        {"IDProvincia":"TS"}
+      ]
    },
    {  
       "name": "Lazio",
       "IDRegione":"LA",
-      "Comitato":{  
-                                       "IDComitato":"RLA"
-      },
-      "Province":{  
-         "IDProvincia":"RM"
-      }
+      "Comitato":[
+      	{"IDComitato":"RLA"}
+      ],
+      "Province":[
+         {"IDProvincia":"RM"}
+      ]
    },
    {  
       "name": "Liguria",
       "IDRegione":"LI",
-      "Comitato":{  
-                                       "IDComitato":"RLI"
-      },
-      "Province":{  
-         "IDProvincia":"GE"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RLI"}
+      ],
+      "Province":[
+         {"IDProvincia":"GE"}
+      ]
    },
    {  
       "name": "Lombardia",
       "IDRegione":"LO",
-      "Comitato":{  
-                                       "IDComitato":"RLO"
-      },
-      "Province":{  
-         "IDProvincia":"MI"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RLO"}
+      ],
+      "Province":[
+         {"IDProvincia":"MI"}
+      ]
    },
    {  
       "name": "Marche",
       "IDRegione":"MA",
-      "Comitato":{  
-                                       "IDComitato":"RMA"
-      },
-      "Province":{  
-         "IDProvincia":"AN"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RMA"}
+      ],
+      "Province":[
+         {"IDProvincia":"AN"}
+      ]
    },
    {  
       "name": "Molise",
       "IDRegione":"MO",
-      "Comitato":{  
-                                       "IDComitato":"RMO"
-      },
-      "Province":{  
-         "IDProvincia":"CB"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RMO"}
+      ],
+      "Province":[
+         {"IDProvincia":"CB"}
+      ]
    },
    {  
       "name": "Piemonte",
       "IDRegione":"PI",
-      "Comitato":{  
-                                       "IDComitato":"RPI"
-      },
-      "Province":{  
-         "IDProvincia":"TO"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RPI"}
+      ],
+      "Province":[
+         {"IDProvincia":"TO"}
+      ]
    },
    {  
       "name": "Puglia",
       "IDRegione":"PU",
-      "Comitato":{  
-                                       "IDComitato":"RPU"
-      },
-      "Province":{  
-         "IDProvincia":"BA"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RPU"}
+      ],
+      "Province":[
+         {"IDProvincia":"BA"}
+      ]
    },
    {  
       "name": "Sardegna",
       "IDRegione":"SA",
-      "Comitato":{  
-                                       "IDComitato":"RSA"
-      },
-      "Province":{  
-         "IDProvincia":"CA"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RSA"}
+      ],
+      "Province":[
+         {"IDProvincia":"CA"}
+      ]
    },
    {  
       "name": "Sicilia",
       "IDRegione":"SO",
-      "Comitato":{  
-                                       "IDComitato":"RSO"
-      },
-      "Province":{  
-         "IDProvincia":"PA"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RSO"}
+      ],
+      "Province":[
+         {"IDProvincia":"PA"}
+      ]
    },
    {  
       "name": "Toscana",
       "IDRegione":"TO",
-      "Comitato":{  
-                                       "IDComitato":"RTO"
-      },
-      "Province":{  
-         "IDProvincia":"FI"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RTO"}
+      ],
+      "Province":[
+         {"IDProvincia":"FI"}
+      ]
    },
    {  
       "name": "Trentino Alto Adige",
       "IDRegione":"TN",
-      "Comitato":{  
-                                       "IDComitato":"RTN"
-      },
-      "Province":{  
-         "IDProvincia":"TN"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RTN"}
+      ],
+      "Province":[
+         {"IDProvincia":"TN"}
+      ]
    },
    {  
       "name": "Umbria",
       "IDRegione":"UM",
-      "Comitato":{  
-                                       "IDComitato":"RUM"
-      },
-      "Province":{  
-         "IDProvincia":"PG"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RUM"}
+      ],
+      "Province":[
+         {"IDProvincia":"PG"}
+      ]
    },
    {  
       "name": "Valle d'Aosta",
       "IDRegione":"AO",
-      "Comitato":{  
-                                       "IDComitato":"RAO"
-      },
-      "Province":{  
-         "IDProvincia":"AO"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RAO"}
+      ],
+      "Province":[
+         {"IDProvincia":"AO"}
+      ]
    },
    {  
       "name": "Veneto",
       "IDRegione":"VE",
-      "Comitato":{  
-                                       "IDComitato":"RVE"
-      },
-      "Province":{  
-         "IDProvincia":"VE"
-      }
+      "Comitato":[ 
+	{"IDComitato":"RVE"}
+      ],
+      "Province":[
+         {"IDProvincia":"VE"}
+      ]
    }
 ]

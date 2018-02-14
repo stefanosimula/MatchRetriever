@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.json.simple.JSONArray;
@@ -18,7 +19,7 @@ import Logging.WPLogger;
 
 public class DataManager {
 	
-	private final String configDataFilePath = "./conf/FIPWebREGIONI.json";
+	private final String configDataFilePath = "\\conf\\FIPWebREGIONI.json";
 	
 	private WPLogger logger = WPLogger.getInstance();
 	private List<Regione> regioni = new ArrayList<>();
@@ -35,16 +36,14 @@ public class DataManager {
 		try {
 			
 			Path currentRelativePath = Paths.get("");
-			String s = currentRelativePath.toAbsolutePath().toString();
-			System.out.println("Current relative path is: " + s);
+			FileReader reader = new FileReader(currentRelativePath.toAbsolutePath()+configDataFilePath);
 			
-			FileReader reader = new FileReader(configDataFilePath);
 			JSONParser jsonParser = new JSONParser();
 			JSONArray jsonObject = (JSONArray) jsonParser.parse(reader);
 			
-			JSONObject jsonRegione;
-			JSONArray jsonProvince;
-			String nome, regioneID, comitatoID, provincia;
+			JSONObject jsonRegione, jsonComitato, jsonProvincia;
+			JSONArray jsonComitati, jsonProvince;
+			String nome, regioneID, comitato, provincia;
 			Regione regione;
 			for(int i =0; i < jsonObject.size(); i++) {
 				jsonRegione = (JSONObject) jsonObject.get(i);
@@ -54,15 +53,22 @@ public class DataManager {
 				
 				regione = new Regione(regioneID, nome);
 				
-				comitatoID = (String) jsonRegione.get("Comitato");
-				regione.AddComitato(new Comitato(comitatoID));
+				jsonComitati =(JSONArray) jsonRegione.get("Comitato");
+				for(int j =0; j < jsonComitati.size(); j++) {
+					jsonComitato = (JSONObject)jsonComitati.get(j);
+					comitato = (String) jsonComitato.get("IDComitato");
+					
+					regione.AddComitato(new Comitato(comitato));
+				}
 				
 				jsonProvince =(JSONArray) jsonRegione.get("Province");
 				for(int j =0; j < jsonProvince.size(); j++) {
-					provincia = (String) jsonProvince.get(j);
+					jsonProvincia = (JSONObject)jsonProvince.get(j);
+					provincia = (String) jsonProvincia.get("IDProvincia");
+					
 					regione.AddProvincia(new Provincia(provincia));
 				}
-				
+
 				regioni.add(regione);
 				logger.Log(DataManager.class.getName(), logger.GetMethodName(), "Added Regione: ["+nome+"]", LogLevel.INFO);
 			}
