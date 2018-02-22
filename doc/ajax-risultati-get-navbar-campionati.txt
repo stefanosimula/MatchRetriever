@@ -1,0 +1,115 @@
+
+<div class="col-xs-10 col-xs-offset-1 height hidden-xs">
+	<div class="col-xs-12 col-sm-4 pad0 sezcampionati height nopad">
+		<a class="campionato height dropdown-toggle " style="cursor:pointer;" data-toggle="dropdown">Campionati Nazionali Maschili</a>
+		<ul class="dropdown-menu dropdown-active">
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=A1/M">Serie A</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=CI/M">Coppa Italia</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=A2/M">Serie A2</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=CI/A2M">C.Italia A2</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=B/M">Serie B</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=CLM/B">C.Italia B</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=SC/M">SUPERCOPPA</a></li>
+
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="http://www.fip.it/giovanile/campionati-giovanili.asp" target="_blank" onclick="track('send', 'event', 'menu', 'click', 'campionati giovanili maschili');">Giovanili</a></li>
+		</ul>
+	</div>
+	<div class="col-xs-12 col-sm-4 pad0 sezcampionati height nopad">
+		<div><p class="separatore-left"></p></div>
+		<a class="campionato height dropdown-toggle " style="cursor:pointer;" data-toggle="dropdown">Campionati Nazionali Femminili</a>
+		<ul class="dropdown-menu dropdown-active">
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=A1/F">Serie A1 Fem</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=A2/F">Serie A2 Fem</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=SC/F">SUPERCOPPA</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=CI/F">Coppa Italia</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=CLF">Coppa Italia A2</a></li>
+
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="http://www.fip.it/giovanile/campionati-giovanili.asp?sesso=F" target="_blank" onclick="track('send', 'event', 'menu', 'click', 'campionati giovanili femminili');">Giovanili</a></li>
+		</ul>
+		<div><p class="separatore-right"></p></div>
+	</div>
+	<div class="col-xs-12 col-sm-4 pad0 sezcampionati height nopad">
+		<a class="campionato height dropdown-toggle campionato-selezionato" style="cursor:pointer;" data-toggle="dropdown">Campionati Regionali e Provinciali</a>
+		<ul class="dropdown-menu dropdown-active">
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=AB&amp;com=RAB&amp;IDProvincia=PE">Abruzzo</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=BA&amp;com=RBA&amp;IDProvincia=PZ">Basilicata</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=CA&amp;com=RCA&amp;IDProvincia=RC">Calabria</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=CM&amp;com=RCM&amp;IDProvincia=NA">Campania</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=EM&amp;com=REM&amp;IDProvincia=BO">Emilia Romagna</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=FR&amp;com=RFR&amp;IDProvincia=TS">Friuli Venezia Giulia</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=LA&amp;com=RLA&amp;IDProvincia=RM">Lazio</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=LI&amp;com=RLI&amp;IDProvincia=GE">Liguria</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=LO&amp;com=RLO&amp;IDProvincia=MI">Lombardia</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=MA&amp;com=RMA&amp;IDProvincia=AN">Marche</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=MO&amp;com=RMO&amp;IDProvincia=CB">Molise</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=PI&amp;com=RPI&amp;IDProvincia=TO">Piemonte</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=PU&amp;com=RPU&amp;IDProvincia=BA">Puglia</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=SA&amp;com=RSA&amp;IDProvincia=CA">Sardegna</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=SO&amp;com=RSO&amp;IDProvincia=PA">Sicilia</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=TO&amp;com=RTO&amp;IDProvincia=FI">Toscana</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=TN&amp;com=RTN&amp;IDProvincia=TN">Trentino Alto Adige</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=UM&amp;com=RUM&amp;IDProvincia=PG">Umbria</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=AO&amp;com=RAO&amp;IDProvincia=AO">Valle d'Aosta</a></li>
+			<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=VE&amp;com=RVE&amp;IDProvincia=VE">Veneto</a></li>
+		</ul>
+	</div>
+</div>
+
+<!--navbar campionati xs-->
+<div class="visible-xs">
+	<div class="navbar-campionati">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 pad0 height">
+			<div class="col-xs-12 sezcampionati nopad">
+				<a class="campionato dropdown-toggle" style="cursor:pointer;" data-toggle="dropdown">Campionati Nazionali Maschili</a>
+				<ul class="dropdown-menu dropdown-active">
+					<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=A1/M">Serie A</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=CI/M">Coppa Italia</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=A2/M">Serie A2</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=CI/A2M">C.Italia A2</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=B/M">Serie B</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=CLM/B">C.Italia B</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=M&camp=SC/M">SUPERCOPPA</a></li>
+
+					<li><a class="museo300" style="color:white;" href="http://www.fip.it/giovanile/campionati-giovanili.asp" target="_blank" onclick="track('send', 'event', 'menu', 'click', 'finali nazionali giovanili maschili');">Finali Nazionali Giovanili</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 sezcampionati nopad">
+				<a class="campionato dropdown-toggle" style="cursor:pointer;" data-toggle="dropdown">Campionati Nazionali Femminili</a>
+				<ul class="dropdown-menu dropdown-active">
+					<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=A1/F">Serie A1 Fem</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=A2/F">Serie A2 Fem</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=SC/F">SUPERCOPPA</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=CI/F">Coppa Italia</a></li>
+<li style="margin-bottom:3%;"><a class="museo300" style="color:white;" href="risultati.aspx?com=NAZ&sesso=F&camp=CLF">Coppa Italia A2</a></li>
+
+					<li><a class="museo300" style="color:white;" href="http://www.fip.it/giovanile/campionati-giovanili.asp?sesso=F" target="_blank" onclick="track('send', 'event', 'menu', 'click', 'finali nazionali giovanili femminili');">Finali Nazionali Giovanili</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 sezcampionati nopad">
+				<a class="campionato dropdown-toggle" style="cursor:pointer;" data-toggle="dropdown">Campionati Regionali e Provinciali</a>
+				<ul class="dropdown-menu dropdown-active">
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=AB&amp;com=RAB&amp;IDProvincia=PE">Abruzzo</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=BA&amp;com=RBA&amp;IDProvincia=PZ">Basilicata</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=CA&amp;com=RCA&amp;IDProvincia=RC">Calabria</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=CM&amp;com=RCM&amp;IDProvincia=NA">Campania</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=EM&amp;com=REM&amp;IDProvincia=BO">Emilia Romagna</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=FR&amp;com=RFR&amp;IDProvincia=TS">Friuli Venezia Giulia</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=LA&amp;com=RLA&amp;IDProvincia=RM">Lazio</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=LI&amp;com=RLI&amp;IDProvincia=GE">Liguria</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=LO&amp;com=RLO&amp;IDProvincia=MI">Lombardia</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=MA&amp;com=RMA&amp;IDProvincia=AN">Marche</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=MO&amp;com=RMO&amp;IDProvincia=CB">Molise</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=PI&amp;com=RPI&amp;IDProvincia=TO">Piemonte</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=PU&amp;com=RPU&amp;IDProvincia=BA">Puglia</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=SA&amp;com=RSA&amp;IDProvincia=CA">Sardegna</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=SO&amp;com=RSO&amp;IDProvincia=PA">Sicilia</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=TO&amp;com=RTO&amp;IDProvincia=FI">Toscana</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=TN&amp;com=RTN&amp;IDProvincia=TN">Trentino Alto Adige</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=UM&amp;com=RUM&amp;IDProvincia=PG">Umbria</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=AO&amp;com=RAO&amp;IDProvincia=AO">Valle d'Aosta</a></li>
+					<li><a class="museo300" style="color:white;" href="risultati.aspx?IDRegione=VE&amp;com=RVE&amp;IDProvincia=VE">Veneto</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

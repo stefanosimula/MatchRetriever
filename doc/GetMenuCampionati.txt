@@ -1,0 +1,367 @@
+
+	<div class="col-xs-12 pad0" style="font-size: 1rem; color: #0055a2;"><p class="nazgio-dati-tit museo700 nomar"><a href="http://www.fip.it/toscana/" target="_blank" onclick='track("send", "event", "risultati", "click", "COMITATO REGIONALE TOSCANA");'>COMITATO REGIONALE TOSCANA</a><!-- aggiornato al 15/02 --></p></div>
+
+	
+		<div class="col-xs-12 pad0" style="margin-top:10px;"><p class="nazgio-dati-tit museo700 nomar">Campionati Maschili</p></div>
+		<ul id="menuCampionati" class="menu pad0 museo300 list-closed" style="cursor:pointer;">	
+			<li class="menuRisultati"><a id="campionato-C1" href="#"><div>Serie C Gold</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-C1-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-C1-1-25768" href="javascript:getRisultatiPartite('RTO', 'M', 'C1', '1', '25768', '0', '5', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'C1', '1', '25768', '0', '5', 'TO', 'FI');"><div>Girone A</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-C2" href="#"><div>Serie C Silver</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-C2-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-C2-1-25751" href="javascript:getRisultatiPartite('RTO', 'M', 'C2', '1', '25751', '0', '5', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'C2', '1', '25751', '0', '5', 'TO', 'FI');"><div>Girone A</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-D" href="#"><div>Serie D reg.</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-D-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-D-1-25769" href="javascript:getRisultatiPartite('RTO', 'M', 'D', '1', '25769', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'D', '1', '25769', '0', '4', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-D-1-25770" href="javascript:getRisultatiPartite('RTO', 'M', 'D', '1', '25770', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'D', '1', '25770', '0', '4', 'TO', 'FI');"><div>Girone B</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-PM" href="#"><div>Prom. Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-PM-1" href="#"><div>PRIMA FASE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-PM-1-25876" href="javascript:getRisultatiPartite('RTO', 'M', 'PM', '1', '25876', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'PM', '1', '25876', '0', '7', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-PM-1-25877" href="javascript:getRisultatiPartite('RTO', 'M', 'PM', '1', '25877', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'PM', '1', '25877', '0', '7', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-PM-1-25878" href="javascript:getRisultatiPartite('RTO', 'M', 'PM', '1', '25878', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'PM', '1', '25878', '0', '7', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-PM-1-25879" href="javascript:getRisultatiPartite('RTO', 'M', 'PM', '1', '25879', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'PM', '1', '25879', '0', '7', 'TO', 'FI');"><div>Girone D</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-1DM" href="#"><div>1°D Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-1DM-1" href="#"><div>Prima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-1DM-1-26392" href="javascript:getRisultatiPartite('RTO', 'M', '1DM', '1', '26392', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', '1DM', '1', '26392', '0', '4', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-1DM-1-26393" href="javascript:getRisultatiPartite('RTO', 'M', '1DM', '1', '26393', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', '1DM', '1', '26393', '0', '4', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-1DM-1-26394" href="javascript:getRisultatiPartite('RTO', 'M', '1DM', '1', '26394', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', '1DM', '1', '26394', '0', '4', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-1DM-1-26395" href="javascript:getRisultatiPartite('RTO', 'M', '1DM', '1', '26395', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', '1DM', '1', '26395', '0', '4', 'TO', 'FI');"><div>Girone D</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U20M" href="#"><div>U20 Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U20M-1" href="#"><div>Priima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U20M-1-26106" href="javascript:getRisultatiPartite('RTO', 'M', 'U20/M', '1', '26106', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U20/M', '1', '26106', '0', '3', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U20M-1-26107" href="javascript:getRisultatiPartite('RTO', 'M', 'U20/M', '1', '26107', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U20/M', '1', '26107', '0', '3', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-U20M-1-26108" href="javascript:getRisultatiPartite('RTO', 'M', 'U20/M', '1', '26108', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U20/M', '1', '26108', '0', '3', 'TO', 'FI');"><div>Girone C</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U18E" href="#"><div>U18 Ecc M</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U18E-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U18E-1-25817" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/E', '1', '25817', '0', '11', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/E', '1', '25817', '0', '11', 'TO', 'FI');"><div>Girone A</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U18L" href="#"><div>U18 Elite M</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U18L-1" href="#"><div>Priima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U18L-1-26128" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/L', '1', '26128', '0', '5', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/L', '1', '26128', '0', '5', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U18L-1-26129" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/L', '1', '26129', '0', '5', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/L', '1', '26129', '0', '5', 'TO', 'FI');"><div>Girone B</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U18M" href="#"><div>U18 Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U18M-1" href="#"><div>Prima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U18M-1-26140" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/M', '1', '26140', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/M', '1', '26140', '0', '6', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U18M-1-26141" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/M', '1', '26141', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/M', '1', '26141', '0', '6', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-U18M-1-26142" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/M', '1', '26142', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/M', '1', '26142', '0', '6', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-U18M-1-26143" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/M', '1', '26143', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/M', '1', '26143', '0', '6', 'TO', 'FI');"><div>Girone D</div></a></li>
+<li class="menuRisultati"><a id="girone-U18M-1-26144" href="javascript:getRisultatiPartite('RTO', 'M', 'U18/M', '1', '26144', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U18/M', '1', '26144', '0', '6', 'TO', 'FI');"><div>Girone E</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U16E" href="#"><div>U16 Ecc M</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U16E-1" href="#"><div>Prima Fase Regionale</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U16E-1-25884" href="javascript:getRisultatiPartite('RTO', 'M', 'U16/E', '1', '25884', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U16/E', '1', '25884', '0', '4', 'TO', 'FI');"><div>Girone Unico</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U16L" href="#"><div>U16 Elite M</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U16L-1" href="#"><div>Prima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U16L-1-26131" href="javascript:getRisultatiPartite('RTO', 'M', 'U16/L', '1', '26131', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U16/L', '1', '26131', '0', '7', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U16L-1-26132" href="javascript:getRisultatiPartite('RTO', 'M', 'U16/L', '1', '26132', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U16/L', '1', '26132', '0', '7', 'TO', 'FI');"><div>Girone B</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U16M" href="#"><div>U16 Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U16M-1" href="#"><div>Prima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U16M-1-26303" href="javascript:getRisultatiPartite('RTO', 'M', 'U16/M', '1', '26303', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U16/M', '1', '26303', '0', '6', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U16M-1-26304" href="javascript:getRisultatiPartite('RTO', 'M', 'U16/M', '1', '26304', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U16/M', '1', '26304', '0', '6', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-U16M-1-26305" href="javascript:getRisultatiPartite('RTO', 'M', 'U16/M', '1', '26305', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U16/M', '1', '26305', '0', '6', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-U16M-1-26307" href="javascript:getRisultatiPartite('RTO', 'M', 'U16/M', '1', '26307', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U16/M', '1', '26307', '0', '6', 'TO', 'FI');"><div>Girone D</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U15E" href="#"><div>U15 Ecc M</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U15E-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U15E-1-25881" href="javascript:getRisultatiPartite('RTO', 'M', 'U15/E', '1', '25881', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U15/E', '1', '25881', '0', '6', 'TO', 'FI');"><div>Girone A</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U15M" href="#"><div>U15 Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U15M-1" href="#"><div>PRIMA FASE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U15M-1-26315" href="javascript:getRisultatiPartite('RTO', 'M', 'U15/M', '1', '26315', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U15/M', '1', '26315', '0', '7', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U15M-1-26316" href="javascript:getRisultatiPartite('RTO', 'M', 'U15/M', '1', '26316', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U15/M', '1', '26316', '0', '7', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-U15M-1-26317" href="javascript:getRisultatiPartite('RTO', 'M', 'U15/M', '1', '26317', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U15/M', '1', '26317', '0', '7', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-U15M-1-26318" href="javascript:getRisultatiPartite('RTO', 'M', 'U15/M', '1', '26318', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U15/M', '1', '26318', '0', '7', 'TO', 'FI');"><div>Girone D</div></a></li>
+<li class="menuRisultati"><a id="girone-U15M-1-26319" href="javascript:getRisultatiPartite('RTO', 'M', 'U15/M', '1', '26319', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U15/M', '1', '26319', '0', '7', 'TO', 'FI');"><div>Girone E</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U14L" href="#"><div>U14 Elite M</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U14L-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U14L-1-26507" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/L', '1', '26507', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/L', '1', '26507', '0', '2', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U14L-1-26508" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/L', '1', '26508', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/L', '1', '26508', '0', '2', 'TO', 'FI');"><div>Girone B</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U14M" href="#"><div>U14 Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U14M-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U14M-1-26470" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/M', '1', '26470', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/M', '1', '26470', '0', '6', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U14M-1-26471" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/M', '1', '26471', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/M', '1', '26471', '0', '6', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-U14M-1-26472" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/M', '1', '26472', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/M', '1', '26472', '0', '6', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-U14M-1-26473" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/M', '1', '26473', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/M', '1', '26473', '0', '6', 'TO', 'FI');"><div>Girone D</div></a></li>
+<li class="menuRisultati"><a id="girone-U14M-1-26474" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/M', '1', '26474', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/M', '1', '26474', '0', '6', 'TO', 'FI');"><div>Girone E</div></a></li>
+<li class="menuRisultati"><a id="girone-U14M-1-26475" href="javascript:getRisultatiPartite('RTO', 'M', 'U14/M', '1', '26475', '0', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U14/M', '1', '26475', '0', '6', 'TO', 'FI');"><div>Girone F</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U13M" href="#"><div>U13 Mas</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U13M-1" href="#"><div>PRIMA FASE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U13M-1-26360" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26360', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26360', '0', '3', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26361" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26361', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26361', '0', '3', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26362" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26362', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26362', '0', '3', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26363" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26363', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26363', '0', '3', 'TO', 'FI');"><div>Girone D</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26364" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26364', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26364', '0', '3', 'TO', 'FI');"><div>Girone E</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26365" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26365', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26365', '0', '3', 'TO', 'FI');"><div>Girone F</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26366" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26366', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26366', '0', '3', 'TO', 'FI');"><div>Girone G</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26367" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26367', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26367', '0', '3', 'TO', 'FI');"><div>Girone H</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26368" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26368', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26368', '0', '3', 'TO', 'FI');"><div>Girone I</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26369" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26369', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26369', '0', '3', 'TO', 'FI');"><div>Girone J</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26370" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26370', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26370', '0', '3', 'TO', 'FI');"><div>Girone K</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26371" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26371', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26371', '0', '3', 'TO', 'FI');"><div>Girone L</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26372" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26372', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26372', '0', '3', 'TO', 'FI');"><div>Girone M</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26373" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26373', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26373', '0', '3', 'TO', 'FI');"><div>Girone N</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26374" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26374', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26374', '0', '3', 'TO', 'FI');"><div>Girone O</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26375" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26375', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26375', '0', '3', 'TO', 'FI');"><div>Girone P</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26376" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26376', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26376', '0', '3', 'TO', 'FI');"><div>Girone Q</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26377" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26377', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26377', '0', '3', 'TO', 'FI');"><div>Girone R</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26378" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26378', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26378', '0', '3', 'TO', 'FI');"><div>Girone S</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26379" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26379', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26379', '0', '3', 'TO', 'FI');"><div>Girone T</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26380" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26380', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26380', '0', '3', 'TO', 'FI');"><div>Girone U</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26381" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26381', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26381', '0', '3', 'TO', 'FI');"><div>Girone V</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-1-26418" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '1', '26418', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '1', '26418', '0', '3', 'TO', 'FI');"><div>Girone W</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-U13M-2" href="#"><div>SECONDA FASE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U13M-2-27078" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27078', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27078', '0', '3', 'TO', 'FI');"><div>FASCIA A Gir.A</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27079" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27079', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27079', '0', '3', 'TO', 'FI');"><div>FASCIA A Gir.B</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27080" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27080', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27080', '0', '3', 'TO', 'FI');"><div>FASCIA A Gir.C</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27081" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27081', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27081', '0', '3', 'TO', 'FI');"><div>FASCIA A Gir.D</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27082" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27082', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27082', '0', '3', 'TO', 'FI');"><div>FASCIA B Gir.A</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27083" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27083', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27083', '0', '3', 'TO', 'FI');"><div>FASCIA B Gir.B</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27084" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27084', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27084', '0', '3', 'TO', 'FI');"><div>FASCIA B Gir.C</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27085" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27085', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27085', '0', '3', 'TO', 'FI');"><div>FASCIA B Gir.D</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27086" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27086', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27086', '0', '3', 'TO', 'FI');"><div>FASCIA C Gir.A</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27087" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27087', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27087', '0', '3', 'TO', 'FI');"><div>FASCIA C Gir.B</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27088" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27088', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27088', '0', '3', 'TO', 'FI');"><div>FASCIA C Gir.C</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27089" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27089', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27089', '0', '3', 'TO', 'FI');"><div>FASCIA C Gir.D</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27090" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27090', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27090', '0', '3', 'TO', 'FI');"><div>FASCIA D Gir.A</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27091" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27091', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27091', '0', '3', 'TO', 'FI');"><div>FASCIA D Gir.B</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27092" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27092', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27092', '0', '3', 'TO', 'FI');"><div>FASCIA D Gir.C</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27093" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27093', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27093', '0', '3', 'TO', 'FI');"><div>FASCIA D Gir.D</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-2-27101" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '2', '27101', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '2', '27101', '0', '3', 'TO', 'FI');"><div>FASCIA D Gir.E</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-U13M-3" href="#"><div>OROLOGIO FASCIA D</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-U13M-3-27493" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '3', '27493', '1', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '3', '27493', '1', '1', 'TO', 'FI');"><div>OROLOGIO DA</div></a></li>
+<li class="menuRisultati"><a id="girone-U13M-3-27494" href="javascript:getRisultatiPartite('RTO', 'M', 'U13/M', '3', '27494', '1', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'U13/M', '3', '27494', '1', '1', 'TO', 'FI');"><div>OROLOGIO DB</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-OPENM" href="#"><div>Open M.</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-OPENM-1" href="#"><div>1^ FASE - ELIMINATOR</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-OPENM-1-25720" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25720', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25720', '0', '3', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-1-25721" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25721', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25721', '0', '3', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-1-25722" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25722', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25722', '0', '3', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-1-25723" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25723', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25723', '0', '3', 'TO', 'FI');"><div>Girone D</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-1-25724" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25724', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25724', '0', '3', 'TO', 'FI');"><div>Girone E</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-1-25725" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25725', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25725', '0', '3', 'TO', 'FI');"><div>Girone F</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-1-25726" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25726', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25726', '0', '3', 'TO', 'FI');"><div>Girone G</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-1-25727" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '1', '25727', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '1', '25727', '0', '3', 'TO', 'FI');"><div>Girone H</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-OPENM-2" href="#"><div>QUARTI DI FINALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-OPENM-2-25937" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '2', '25937', '0', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '2', '25937', '0', '1', 'TO', 'FI');"><div>Primo Quarto</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-2-25938" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '2', '25938', '0', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '2', '25938', '0', '1', 'TO', 'FI');"><div>Secondo Quarto</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-2-25939" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '2', '25939', '0', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '2', '25939', '0', '1', 'TO', 'FI');"><div>Terzo Quarto</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-2-25940" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '2', '25940', '0', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '2', '25940', '0', '1', 'TO', 'FI');"><div>Quarto Quarto</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-OPENM-3" href="#"><div>FINAL FOUR TROFEO AL</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="girone-OPENM-3-27011" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '3', '27011', '0', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '3', '27011', '0', '1', 'TO', 'FI');"><div>SEMIFINALI</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-3-27244" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '3', '27244', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '3', '27244', '0', '2', 'TO', 'FI');"><div>FINALE 3°- 4° POSTO</div></a></li>
+<li class="menuRisultati"><a id="girone-OPENM-3-27245" href="javascript:getRisultatiPartite('RTO', 'M', 'OPENM', '3', '27245', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'M', 'OPENM', '3', '27245', '0', '2', 'TO', 'FI');"><div>FINALE 1°- 2° POSTO</div></a></li>
+</ul></li>
+</ul></li>
+
+		</ul>
+	
+		<div class="col-xs-12 pad0"><p class="nazgio-dati-tit museo700 nomar">Campionati Femminili</p></div>
+		<ul id="menuCampionati" class="menu pad0 museo300 list-closed" style="cursor:pointer;">	
+			<li class="menuRisultati"><a id="campionato-BF" href="#"><div>B Femm.</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-BF-1" href="#"><div>PRIMA FASE REGIONALE</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-BF-1-25771" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'B/F', '1', '25771', '0', '4', 'TO', 'FI');"><div>Girone A</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-CF" href="#"><div>C Femm.</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-CF-1" href="#"><div>Priima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-CF-1-25928" href="javascript:getRisultatiPartite('RTO', 'F', 'C/F', '1', '25928', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'C/F', '1', '25928', '0', '3', 'TO', 'FI');"><div>Girone Unico</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-PF" href="#"><div>Prom. Fem</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-PF-1" href="#"><div>Priima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-PF-1-25975" href="javascript:getRisultatiPartite('RTO', 'F', 'PF', '1', '25975', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'PF', '1', '25975', '0', '3', 'TO', 'FI');"><div>Girone Unico</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U20F" href="#"><div>U20 Femm.</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U20F-1" href="#"><div>Prima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U20F-1-26819" href="javascript:getRisultatiPartite('RTO', 'F', 'U20/F', '1', '26819', '0', '5', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U20/F', '1', '26819', '0', '5', 'TO', 'FI');"><div>Girone Unico</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-U20F-2" href="#"><div>Orologio</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U20F-2-27369" href="javascript:getRisultatiPartite('RTO', 'F', 'U20/F', '2', '27369', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U20/F', '2', '27369', '0', '2', 'TO', 'FI');"><div>Girone Orologio</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U18F" href="#"><div>U18 Fem</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U18F-1" href="#"><div>Priima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U18F-1-25972" href="javascript:getRisultatiPartite('RTO', 'F', 'U18/F', '1', '25972', '0', '5', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U18/F', '1', '25972', '0', '5', 'TO', 'FI');"><div>Girone Unico</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U16F" href="#"><div>U16 Fem</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U16F-1" href="#"><div>Priima Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U16F-1-25959" href="javascript:getRisultatiPartite('RTO', 'F', 'U16/F', '1', '25959', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U16/F', '1', '25959', '0', '7', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati">AA<a id="girone-U16F-1-25964" href="javascript:getRisultatiPartite('RTO', 'F', 'U16/F', '1', '25964', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U16/F', '1', '25964', '0', '7', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati">AA<a id="girone-U16F-1-25965" href="javascript:getRisultatiPartite('RTO', 'F', 'U16/F', '1', '25965', '0', '7', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U16/F', '1', '25965', '0', '7', 'TO', 'FI');"><div>Girone C</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-U16F-2" href="#"><div>Seconda Fase Qualifi</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U16F-2-27318" href="javascript:getRisultatiPartite('RTO', 'F', 'U16/F', '2', '27318', '1', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U16/F', '2', '27318', '1', '1', 'TO', 'FI');"><div>Girone Unico</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-U16F-3" href="#"><div>Seconda Fase Classif</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U16F-3-27415" href="javascript:getRisultatiPartite('RTO', 'F', 'U16/F', '3', '27415', '1', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U16/F', '3', '27415', '1', '1', 'TO', 'FI');"><div>Girone E</div></a></li>
+<li class="menuRisultati">AA<a id="girone-U16F-3-27416" href="javascript:getRisultatiPartite('RTO', 'F', 'U16/F', '3', '27416', '1', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U16/F', '3', '27416', '1', '1', 'TO', 'FI');"><div>Girone F</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-U14F" href="#"><div>U14 Fem</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-U14F-1" href="#"><div>PRIMA FASE GOLD</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U14F-1-26419" href="javascript:getRisultatiPartite('RTO', 'F', 'U14/F', '1', '26419', '0', '4', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U14/F', '1', '26419', '0', '4', 'TO', 'FI');"><div>Girone GOLD</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-U14F-2" href="#"><div>PRIMA FASE SILVER</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U14F-2-26544" href="javascript:getRisultatiPartite('RTO', 'F', 'U14/F', '2', '26544', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U14/F', '2', '26544', '0', '3', 'TO', 'FI');"><div>Girone A Silver</div></a></li>
+<li class="menuRisultati">AA<a id="girone-U14F-2-26545" href="javascript:getRisultatiPartite('RTO', 'F', 'U14/F', '2', '26545', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U14/F', '2', '26545', '0', '3', 'TO', 'FI');"><div>Girone B Silver</div></a></li>
+<li class="menuRisultati">AA<a id="girone-U14F-2-26546" href="javascript:getRisultatiPartite('RTO', 'F', 'U14/F', '2', '26546', '0', '3', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U14/F', '2', '26546', '0', '3', 'TO', 'FI');"><div>Girone C Silver</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-U14F-3" href="#"><div>SILVER Seconda Fase</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-U14F-3-27128" href="javascript:getRisultatiPartite('RTO', 'F', 'U14/F', '3', '27128', '1', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U14/F', '3', '27128', '1', '6', 'TO', 'FI');"><div>Girone D Silver</div></a></li>
+<li class="menuRisultati">AA<a id="girone-U14F-3-27129" href="javascript:getRisultatiPartite('RTO', 'F', 'U14/F', '3', '27129', '1', '6', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'U14/F', '3', '27129', '1', '6', 'TO', 'FI');"><div>Girone E Bronze</div></a></li>
+</ul></li>
+</ul></li>
+<li class="menuRisultati"><a id="campionato-OPENF" href="#"><div>Open F.</div></a><ul class="navfed list-closed">
+<li class="menuRisultati"><a id="fase-OPENF-1" href="#"><div>PRIMA FASE - ELIMINA</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-OPENF-1-25797" href="javascript:getRisultatiPartite('RTO', 'F', 'OPENF', '1', '25797', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'OPENF', '1', '25797', '0', '2', 'TO', 'FI');"><div>Girone A</div></a></li>
+<li class="menuRisultati">AA<a id="girone-OPENF-1-25798" href="javascript:getRisultatiPartite('RTO', 'F', 'OPENF', '1', '25798', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'OPENF', '1', '25798', '0', '2', 'TO', 'FI');"><div>Girone B</div></a></li>
+<li class="menuRisultati">AA<a id="girone-OPENF-1-25799" href="javascript:getRisultatiPartite('RTO', 'F', 'OPENF', '1', '25799', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'OPENF', '1', '25799', '0', '2', 'TO', 'FI');"><div>Girone C</div></a></li>
+<li class="menuRisultati">AA<a id="girone-OPENF-1-25800" href="javascript:getRisultatiPartite('RTO', 'F', 'OPENF', '1', '25800', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'OPENF', '1', '25800', '0', '2', 'TO', 'FI');"><div>Girone D</div></a></li>
+</ul></li>
+<li class="menuRisultati"><a id="fase-OPENF-2" href="#"><div>FINAL FOUR TROFEO LO</div></a><ul class="navfed list-closed">
+<li class="menuRisultati">AA<a id="girone-OPENF-2-27025" href="javascript:getRisultatiPartite('RTO', 'F', 'OPENF', '2', '27025', '0', '1', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'OPENF', '2', '27025', '0', '1', 'TO', 'FI');"><div>SEMIFINALI</div></a></li>
+<li class="menuRisultati">AA<a id="girone-OPENF-2-27158" href="javascript:getRisultatiPartite('RTO', 'F', 'OPENF', '2', '27158', '0', '2', 'TO', 'FI'); getRisultatiClassifica('RTO', 'F', 'OPENF', '2', '27158', '0', '2', 'TO', 'FI');"><div>FINALI</div></a></li>
+</ul></li>
+</ul></li>
+
+		</ul>
+	
+<!--
+	<li class="menuRisultati"><a href="#"><div>Livello1</div></a>
+		<ul class="navfed list-closed">
+			<li class="menuRisultati"><a href="#"><div>Livello2</div></a>
+				<ul class="navfed list-closed">
+					<li class="menuRisultati"><a href="#"><div>Livello3</div></a>
+						<ul class="navfed list-closed">
+							<li class="menuRisultati"><a href="#"><div>Livello4</div></a>
+								<ul class="navfed list-closed">
+									<li class="menuRisultati selected"><a href="#"><div>Livello5</div></a></li>
+									<li class="menuRisultati selected"><a href="#"><div>Livello5</div></a></li>
+									<li class="menuRisultati selected"><a href="#"><div>Livello5</div></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="menuRisultati"><a href="#"><div>Livello2</div></a></li>
+		</ul>
+	</li>
+	<li class="menuRisultati"><a href="#"><div>Livello1</div></a>
+		<ul class="navfed list-closed">
+			<li class="menuRisultati"><a href="#"><div>Livello2</div></a>
+				<ul class="navfed list-closed">
+					<li class="menuRisultati"><a href="#"><div>Livello3</div></a>
+						<ul class="navfed list-closed">
+							<li class="menuRisultati"><a href="#"><div>Livello4</div></a>
+								<ul class="navfed list-closed">
+									<li class="menuRisultati selected"><a href="#"><div>Livello5</div></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li class="menuRisultati"><a href="#"><div>Livello1</div></a>
+		<ul class="navfed list-closed">
+			<li class="menuRisultati"><a href="#"><div>Livello2</div></a>
+				<ul class="navfed list-closed">
+					<li class="menuRisultati"><a href="#"><div>Livello3</div></a>
+						<ul class="navfed list-closed">
+							<li class="menuRisultati"><a href="#"><div>Livello4</div></a>
+								<ul class="navfed list-closed">
+									<li class="menuRisultati selected"><a href="#"><div>Livello5</div></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+-->
+
+<div class="risultati-cerca"><a href="javascript:cercaGara();"><i class="fa fa-search" aria-hidden="true"></i> CERCA UNA GARA</a></div>
+
+<div class="hidden-xs col-xs-12 pad0 risultati-legenda">
+	<p class="risultati-title">Legenda</p>
+	<div class="col-xs-12 pad0 legenda-cont">
+	
+		<div class="col-xs-12 pad0 legenda-text">
+			<div class="col-xs-2 pad0"><img src="images/IcoLegNonDesignata.png" class="img-responsive"/></div>
+			<div class="col-xs-10 pad0"><b>Gara non ancora designata</b></div>
+			<div class="col-xs-12 pad0"><p>Non sono ancora stati designati gli arbitri per la gara</p></div>
+		</div>
+		
+		<div class="col-xs-12 pad0 legenda-text">
+			<div class="col-xs-2 pad0"><img src="images/IcoLegNonVisibile.png" class="img-responsive"/></div>
+			<div class="col-xs-10 pad0"><b>Gara designata: la designazione non &egrave; ancora visibile</b></div>
+			<div class="col-xs-12 pad0"><p>Portando il mouse sopra l'immagine verr&agrave; indicata la data in cui saranno visibili i nomi degli arbitri</p></div>
+		</div>
+		
+		<div class="col-xs-12 pad0 legenda-text">
+			<div class="col-xs-2 pad0"><img src="images/IcoLegVisibile.png" class="img-responsive"/></div>
+			<div class="col-xs-10 pad0"><b>Gara designata: la designazione &egrave; visibile</b></div>
+			<div class="col-xs-12 pad0"><p>Portando il mouse sopra l'immagine verranno indicati i nomi degli Arbitri</p></div>
+		</div>
+		
+		<div class="col-xs-12 pad0 legenda-text">
+			<div class="col-xs-2 pad0"><img src="images/IcoLegRisultato.png" class="img-responsive"/></div>
+			<div class="col-xs-10 pad0"><b>Risultato ufficioso</b></div>
+			<div class="col-xs-12 pad0"><p>E' indicato il risultato acquisito sul campo di gioco: tale risultato deve essere omologato dal Giudice Sportivo</p></div>
+		</div>
+		
+		<div class="col-xs-12 pad0 legenda-text">
+			<div class="col-xs-2 pad0"><img src="images/IcoLegSospesa.png" class="img-responsive"/></div>
+			<div class="col-xs-10 pad0"><b>Omologazione sospesa</b></div>
+			<div class="col-xs-12 pad0"><p>Il Giudice Sportivo ha sospeso l'omologazione della gara. Cliccando sull'immagine si potr&agrave; leggere la motivazione della sospensione</p></div>
+		</div>
+		
+		<div class="col-xs-12 pad0 legenda-text">
+			<div class="col-xs-2 pad0"><img src="images/IcoLegProvvedimenti.png" class="img-responsive"/></div>
+			<div class="col-xs-10 pad0"><b>Gara omologata con provvedimenti disciplinari</b></div>
+			<div class="col-xs-12 pad0"><p>La gara &egrave; omologata e sono stati presi provvedimenti disciplinari: cliccando sull'immagine sar&agrave; possibile visualizzarli</p></div>
+		</div>
+		
+	</div>
+</div>
+

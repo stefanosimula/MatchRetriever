@@ -14,12 +14,15 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import Data.Objects.Comitato;
+import Data.Objects.Provincia;
+import Data.Objects.Regione;
 import Logging.LogLevel;
 import Logging.WPLogger;
 
 public class DataManager {
 	
-	private final String configDataFilePath = "\\conf\\FIPWebREGIONI.json";
+	private final String configDataFilePath = "\\conf\\FIPWebREGIONI-Toscana.json";
 	
 	private WPLogger logger = WPLogger.getInstance();
 	private List<Regione> regioni = new ArrayList<>();

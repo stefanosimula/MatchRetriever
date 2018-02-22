@@ -1,0 +1,386 @@
+
+
+<!-- Link diretto al campionato -->
+<div class="col-xs-12 text-right pull-right">
+    <a title="link diretto a questa pagina risultati" href="http://www.fip.it/risultati.aspx?com=RTO&sesso=F&camp=B/F&fase=1&girone=25771&ar=1&turno=5&IDRegione=TO&IDProvincia=FI" target="_blank">
+        <i class="fa fa-link" aria-hidden="true"></i>
+    </a>
+</div>
+<!-- Titolo -->
+<div class="col-xs-12">
+    <p class="nazgio-dati-tit museo700 nomar">B Femm. - Girone A</p>
+</div>
+<!-- Andata/Ritorno -->
+<div class="col-xs-12 pad0" style="margin-top:1rem; margin-bottom:3rem;">
+    <div class="col-xs-12 pad0" style="display:table; margin-bottom:0.4rem;">
+        <div class="risultati-andata">
+            <div>andata</div>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="22-10-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '1', 'TO', 'FI');">
+                <div>1</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="29-10-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '2', 'TO', 'FI');">
+                <div>2</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="05-11-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '3', 'TO', 'FI');">
+                <div>3</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="12-11-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '4', 'TO', 'FI');">
+                <div>4</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-active">
+            <a title="19-11-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI');">
+                <div>5</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="26-11-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '6', 'TO', 'FI');">
+                <div>6</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="03-12-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '7', 'TO', 'FI');">
+                <div>7</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="10-12-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '8', 'TO', 'FI');">
+                <div>8</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="24-12-2017" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '9', 'TO', 'FI');">
+                <div>9</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="07-01-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '10', 'TO', 'FI');">
+                <div>10</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="14-01-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '1', '11', 'TO', 'FI');">
+                <div>11</div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xs-12 pad0" style="display:table;">
+        <div class="risultati-andata">
+            <div>ritorno</div>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="21-01-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '1', 'TO', 'FI');">
+                <div>1</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="28-01-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '2', 'TO', 'FI');">
+                <div>2</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="04-02-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '3', 'TO', 'FI');">
+                <div>3</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="11-02-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '4', 'TO', 'FI');">
+                <div>4</div>
+            </a>
+        </div>
+        <div class="risultati-giorno risultati-giorno-close">
+            <a title="18-02-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '5', 'TO', 'FI');">
+                <div>5</div>
+            </a>
+        </div>
+        <div class="risultati-giorno ">
+            <a title="25-02-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '6', 'TO', 'FI');">
+                <div>6</div>
+            </a>
+        </div>
+        <div class="risultati-giorno ">
+            <a title="04-03-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '7', 'TO', 'FI');">
+                <div>7</div>
+            </a>
+        </div>
+        <div class="risultati-giorno ">
+            <a title="11-03-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '8', 'TO', 'FI');">
+                <div>8</div>
+            </a>
+        </div>
+        <div class="risultati-giorno ">
+            <a title="18-03-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '9', 'TO', 'FI');">
+                <div>9</div>
+            </a>
+        </div>
+        <div class="risultati-giorno ">
+            <a title="25-03-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '10', 'TO', 'FI');">
+                <div>10</div>
+            </a>
+        </div>
+        <div class="risultati-giorno ">
+            <a title="08-04-2018" href="javascript:getRisultatiPartite('RTO', 'F', 'B/F', '1', '25771', '0', '11', 'TO', 'FI');">
+                <div>11</div>
+            </a>
+        </div>
+    </div>
+</div>
+<table id="table-risultati" class="table">
+    <tbody>
+        <!-- inizio Partite -->
+        <tr>
+            <td class="scudetto"></td>
+            <td class="nome-squadra nome-squadra-1">LE MURA SPRING BASKETBALL</td>
+            <td class="risultato-squadra risultato-squadra-1">47</td>
+            <!--
+					<td></td><td><i class="fa fa-caret-right fa-2x risultato-arrow" aria-hidden="true"></i></td>
+				-->
+            <td>
+                <i class="fa fa-minus risultato-arrow" aria-hidden="true"></i>
+            </td>
+            <td class="risultato-squadra risultato-squadra-2">53</td>
+            <td class="nome-squadra nome-squadra-2">A.D.BASKET FEMMINILE PONTEDERA</td>
+            <td class="scudetto"></td>
+        </tr>
+        <tr>
+            <!-- <td class="numero-partita"><a href="dettaglio-partita.aspx?C01_COM_FK=RTO&C01_GARA_PK=000914">000914</a></td> -->
+            <td class="numero-partita">
+                <a title="Visualizza dettaglio gara" href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000914');">000914</a>
+            </td>
+            <td class="luogo-arbitri" colspan="5">
+						CELENTANO S. (AR) - MAGAZZINI D. (FI)
+						
+                <br />
+                <strong>18-11-2017 - 18:30</strong>
+            </td>
+            <td class="ico-sanzione">
+                <a href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000914');">
+                    <!-- provvediamenti-disciplinari -->
+                    <!-- <img src="images/icona-provvediamenti-disciplinari.png" /> -->
+                    <!-- /provvediamenti-disciplinari -->
+					
+                </a>
+            </td>
+        </tr>
+        <!-- inizio sanzioni -->
+        <!-- fine sanzioni -->
+        <tr>
+            <td colspan="7">
+                <div class="div-risultato-partita"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="scudetto"></td>
+            <td class="nome-squadra nome-squadra-1">NAMED N. 8 S.G.VALDARNO</td>
+            <td class="risultato-squadra risultato-squadra-1">43</td>
+            <!--
+					<td></td><td><i class="fa fa-caret-right fa-2x risultato-arrow" aria-hidden="true"></i></td>
+				-->
+            <td>
+                <i class="fa fa-minus risultato-arrow" aria-hidden="true"></i>
+            </td>
+            <td class="risultato-squadra risultato-squadra-2">48</td>
+            <td class="nome-squadra nome-squadra-2">IL PALAGIACCIO  P.F. FIRENZE</td>
+            <td class="scudetto"></td>
+        </tr>
+        <tr>
+            <!-- <td class="numero-partita"><a href="dettaglio-partita.aspx?C01_COM_FK=RTO&C01_GARA_PK=000915">000915</a></td> -->
+            <td class="numero-partita">
+                <a title="Visualizza dettaglio gara" href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000915');">000915</a>
+            </td>
+            <td class="luogo-arbitri" colspan="5">
+						MINNELLA E. (SI) - BURRONI M. (SI)
+						
+                <br />
+                <strong>19-11-2017 - 18:00</strong>
+            </td>
+            <td class="ico-sanzione">
+                <a href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000915');">
+                    <!-- provvediamenti-disciplinari -->
+                    <!-- <img src="images/icona-provvediamenti-disciplinari.png" /> -->
+                    <!-- /provvediamenti-disciplinari -->
+					
+                </a>
+            </td>
+        </tr>
+        <!-- inizio sanzioni -->
+        <!-- fine sanzioni -->
+        <tr>
+            <td colspan="7">
+                <div class="div-risultato-partita"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="scudetto"></td>
+            <td class="nome-squadra nome-squadra-1">GMV BASKET A.DIL.</td>
+            <td class="risultato-squadra risultato-squadra-1">37</td>
+            <!--
+					<td></td><td><i class="fa fa-caret-right fa-2x risultato-arrow" aria-hidden="true"></i></td>
+				-->
+            <td>
+                <i class="fa fa-minus risultato-arrow" aria-hidden="true"></i>
+            </td>
+            <td class="risultato-squadra risultato-squadra-2">42</td>
+            <td class="nome-squadra nome-squadra-2">A.S.D AVVENIRE 2000 RIFREDI</td>
+            <td class="scudetto"></td>
+        </tr>
+        <tr>
+            <!-- <td class="numero-partita"><a href="dettaglio-partita.aspx?C01_COM_FK=RTO&C01_GARA_PK=000916">000916</a></td> -->
+            <td class="numero-partita">
+                <a title="Visualizza dettaglio gara" href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000916');">000916</a>
+            </td>
+            <td class="luogo-arbitri" colspan="5">
+						BARBARULO F. (FI) - BALDINI M. (FI)
+						
+                <br />
+                <strong>18-11-2017 - 21:00</strong>
+            </td>
+            <td class="ico-sanzione">
+                <a href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000916');">
+                    <!-- provvediamenti-disciplinari -->
+                    <!-- <img src="images/icona-provvediamenti-disciplinari.png" /> -->
+                    <!-- /provvediamenti-disciplinari -->
+					
+                </a>
+            </td>
+        </tr>
+        <!-- inizio sanzioni -->
+        <!-- fine sanzioni -->
+        <tr>
+            <td colspan="7">
+                <div class="div-risultato-partita"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="scudetto"></td>
+            <td class="nome-squadra nome-squadra-1">IL DRAGO E LA FORNACE COSTONE </td>
+            <td class="risultato-squadra risultato-squadra-1">68</td>
+            <!--
+					<td><i class="fa fa-caret-left fa-2x risultato-arrow" aria-hidden="true"></i></td><td></td>
+				-->
+        <td>
+            <i class="fa fa-minus risultato-arrow" aria-hidden="true"></i>
+        </td>
+        <td class="risultato-squadra risultato-squadra-2">49</td>
+        <td class="nome-squadra nome-squadra-2">ORZA RENT - NICO BASKET FEMMIN</td>
+        <td class="scudetto"></td>
+    </tr>
+    <tr>
+        <!-- <td class="numero-partita"><a href="dettaglio-partita.aspx?C01_COM_FK=RTO&C01_GARA_PK=000917">000917</a></td> -->
+        <td class="numero-partita">
+            <a title="Visualizza dettaglio gara" href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000917');">000917</a>
+        </td>
+        <td class="luogo-arbitri" colspan="5">
+						PUOCCI L. (FI) - LUCHI M. (PO)
+						
+            <br />
+            <strong>19-11-2017 - 18:00</strong>
+        </td>
+        <td class="ico-sanzione">
+            <a href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000917');">
+                <!-- provvediamenti-disciplinari -->
+                <!-- <img src="images/icona-provvediamenti-disciplinari.png" /> -->
+                <!-- /provvediamenti-disciplinari -->
+					
+            </a>
+        </td>
+    </tr>
+    <!-- inizio sanzioni -->
+    <!-- fine sanzioni -->
+    <tr>
+        <td colspan="7">
+            <div class="div-risultato-partita"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="scudetto"></td>
+        <td class="nome-squadra nome-squadra-1">IL FOTOAMATORE FLORENCE BK</td>
+        <td class="risultato-squadra risultato-squadra-1">61</td>
+        <!--
+					<td></td><td><i class="fa fa-caret-right fa-2x risultato-arrow" aria-hidden="true"></i></td>
+				-->
+        <td>
+            <i class="fa fa-minus risultato-arrow" aria-hidden="true"></i>
+        </td>
+        <td class="risultato-squadra risultato-squadra-2">66</td>
+        <td class="nome-squadra nome-squadra-2">G.S. JOLLY ACLI BASKET A.S.D.</td>
+        <td class="scudetto"></td>
+    </tr>
+    <tr>
+        <!-- <td class="numero-partita"><a href="dettaglio-partita.aspx?C01_COM_FK=RTO&C01_GARA_PK=000918">000918</a></td> -->
+        <td class="numero-partita">
+            <a title="Visualizza dettaglio gara" href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000918');">000918</a>
+        </td>
+        <td class="luogo-arbitri" colspan="5">
+						MELAI M. (PI) - NATUCCI G. (LU)
+						
+            <br />
+            <strong>19-11-2017 - 18:15</strong>
+        </td>
+        <td class="ico-sanzione">
+            <a href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000918');">
+                <!-- provvediamenti-disciplinari -->
+                <!-- <img src="images/icona-provvediamenti-disciplinari.png" /> -->
+                <!-- /provvediamenti-disciplinari -->
+					
+            </a>
+        </td>
+    </tr>
+    <!-- inizio sanzioni -->
+    <!-- fine sanzioni -->
+    <tr>
+        <td colspan="7">
+            <div class="div-risultato-partita"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="scudetto"></td>
+        <td class="nome-squadra nome-squadra-1">A.S.D.BASKET DON BOSCO FIGLINE</td>
+        <td class="risultato-squadra risultato-squadra-1">61</td>
+        <!--
+					<td><i class="fa fa-caret-left fa-2x risultato-arrow" aria-hidden="true"></i></td><td></td>
+				-->
+    <td>
+        <i class="fa fa-minus risultato-arrow" aria-hidden="true"></i>
+    </td>
+    <td class="risultato-squadra risultato-squadra-2">45</td>
+    <td class="nome-squadra nome-squadra-2">POLYSPORT BASKET LAVAGNA A.D.</td>
+    <td class="scudetto"></td>
+</tr>
+<tr>
+    <!-- <td class="numero-partita"><a href="dettaglio-partita.aspx?C01_COM_FK=RTO&C01_GARA_PK=000919">000919</a></td> -->
+    <td class="numero-partita">
+        <a title="Visualizza dettaglio gara" href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000919');">000919</a>
+    </td>
+    <td class="luogo-arbitri" colspan="5">
+						ZANZARELLA C. (SI) - DE LUCA M. (SI)
+						
+        <br />
+        <strong>19-11-2017 - 18:00</strong>
+    </td>
+    <td class="ico-sanzione">
+        <a href="javascript:getDettaglioPartita('RTO', 'F', 'B/F', '1', '25771', '1', '5', 'TO', 'FI', '', '000919');">
+            <!-- provvediamenti-disciplinari -->
+            <!-- <img src="images/icona-provvediamenti-disciplinari.png" /> -->
+            <!-- /provvediamenti-disciplinari -->
+					
+        </a>
+    </td>
+</tr>
+<!-- inizio sanzioni -->
+<!-- fine sanzioni -->
+<tr>
+    <td colspan="7">
+        <div class="div-risultato-partita"></div>
+    </td>
+</tr>
+</tbody>
+</table>

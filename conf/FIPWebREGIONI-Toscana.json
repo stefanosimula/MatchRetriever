@@ -1,0 +1,12 @@
+[  
+   {  
+      "name": "Toscana",
+      "IDRegione":"TO",
+      "Comitato":[ 
+	{"IDComitato":"RTO"}
+      ],
+      "Province":[
+         {"IDProvincia":"FI"}
+      ]
+   }
+]
