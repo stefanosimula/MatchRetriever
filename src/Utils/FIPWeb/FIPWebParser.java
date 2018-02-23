@@ -87,7 +87,7 @@ public class FIPWebParser {
         Document           doc     = Jsoup.parse(htmlGetPartiteResult);
         Element            table   = doc.getElementById("table-risultati");
         Partita            partita;
-        int                numeroGara;
+        String                numeroGara;
         int puntiA = 0, puntiB = 0;
         String            squadraA, squadraB;
         Date               date;
@@ -178,7 +178,7 @@ public class FIPWebParser {
              */
             Element matchNumberCol = row2.getElementsByClass(NumeroPartitaClass).get(0);
             Element gameData = matchNumberCol.getElementsByTag("a").get(0);
-            numeroGara = Integer.parseInt(gameData.text());
+            numeroGara = gameData.text();
             
             String hrefValue     = gameData.attr("href");
             String[] campionatoData = hrefValue.split("'");
@@ -258,8 +258,155 @@ public class FIPWebParser {
         return games;
     }
     
-    public static Partita ParseGetDettaglioPartitaResult(String htmlGetDettaglioPartitaResult) {
-    	return null;
+    @SuppressWarnings("deprecation")
+	public static Partita ParseGetDettaglioPartitaResult(String htmlGetDettaglioPartitaResult) {
+    	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "Trying to parse GetDettaglioPartitaResult: ["+htmlGetDettaglioPartitaResult+"]", LogLevel.INFO);
+    	
+        Document           doc     = Jsoup.parse(htmlGetDettaglioPartitaResult);
+        Element            table   = doc.getElementById("table-risultati");
+        Partita            partita;
+        
+        String             numeroGara;
+        int puntiA = 0, puntiB = 0;
+        String            squadraA, squadraB, campo;
+        String arbitro1, arbitro2, arbitro3, osservatore;
+        String udc1, udc2, udc3, provvedimenti = "";
+        Date               date;
+        Time               time;
+        Element            row, row2;
+        
+        if(htmlGetDettaglioPartitaResult.isEmpty()) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "htmlGetDettaglioPartitaResult is empty", LogLevel.INFO);
+    		return null;
+    	}
+                
+        Elements rows = table.getElementsByClass("nome-squadra nome-squadra-1");
+        if(rows.size() == 0) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find Team A Name", LogLevel.ERROR);
+        	return null;
+        }
+        
+        squadraA = rows.get(0).text();
+        
+        rows = table.getElementsByClass("risultato-squadra risultato-squadra-1");
+        if(rows.size() == 0) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find points of Team A", LogLevel.ERROR);
+        	return null;
+        }
+        
+        puntiA = Integer.parseInt(rows.get(0).text());
+        
+        rows = table.getElementsByClass("nome-squadra nome-squadra-2");
+        if(rows.size() == 0) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find Team B Name", LogLevel.ERROR);
+        	return null;
+        }
+        
+        squadraB = rows.get(0).text();
+        
+        rows = table.getElementsByClass("risultato-squadra risultato-squadra-2");
+        if(rows.size() == 0) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find points of Team B", LogLevel.ERROR);
+        	return null;
+        }
+        
+        puntiB = Integer.parseInt(rows.get(0).text());
+        
+        rows = table.getElementsByClass("numero-partita");
+        if(rows.size() == 0) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find game ID", LogLevel.ERROR);
+        	return null;
+        }
+        
+        numeroGara = rows.get(0).text();
+        
+        
+        rows = table.getElementsByClass("luogo-arbitri");
+        if(rows.size() == 0) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find game information", LogLevel.ERROR);
+        	return null;
+        }
+        
+        Element moreInfo = rows.get(0);
+        Elements dateTimeInfo = moreInfo.getElementsByTag("strong");
+        if(dateTimeInfo.size() == 0) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find date and time game", LogLevel.ERROR);
+        	return null;
+        }
+        
+        String strDateTime = dateTimeInfo.get(0).text();
+                
+        String[] tmp       = strDateTime.split(" - ");
+        String[] dataElems = tmp[0].split("/");
+
+        date = new Date(Integer.parseInt(dataElems[2]) - 1900,
+                        Integer.parseInt(dataElems[1]) - 1,
+                        Integer.parseInt(dataElems[0]));
+
+        String[] timeElems = tmp[1].split(":");
+
+        time = new Time(Integer.parseInt(timeElems[0]), Integer.parseInt(timeElems[1]), 0);
+        
+        
+        if(rows.size() < 4) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find field game information", LogLevel.ERROR);
+        	return null;
+        }
+        
+        Element fieldEl = rows.get(3);
+        // <strong>Campo di gioco</strong>: PALASPORT &#39;B. MACCHIA&#39;, Via S. Allende  2 LIVORNO (LI)
+        String strFieldElement = fieldEl.text();
+        System.out.println(strFieldElement);
+        campo = strFieldElement.substring(strFieldElement.indexOf(":"), strFieldElement.length());
+        // TODO clean string from special character
+        campo = campo.replaceAll("&#39;", "");
+        
+        if(rows.size() < 11) {
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find referees game information", LogLevel.ERROR);
+        	return null;
+        }
+        Element fieldReferee = rows.get(4);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        String strRefElement = fieldEl.text();
+        arbitro1 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        
+        fieldReferee = rows.get(5);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldEl.text();
+        arbitro2 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        
+        fieldReferee = rows.get(6);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldEl.text();
+        arbitro3 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        
+        fieldReferee = rows.get(7);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldEl.text();
+        osservatore = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        
+        fieldReferee = rows.get(8);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldEl.text();
+        udc1 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        
+        fieldReferee = rows.get(9);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldEl.text();
+        udc2 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        
+        fieldReferee = rows.get(10);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldEl.text();
+        udc3 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+            
+            partita = new Partita("", "", "", "", "", Sesso.Maschile, "", "", true, "", 
+            		numeroGara, squadraA, squadraB, puntiA, puntiB, campo, date, time, 
+            		arbitro1, arbitro2, arbitro3, osservatore, udc1, udc2, udc3, provvedimenti);
+        
+        logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "Parse GetPartiteResult complete", LogLevel.INFO);
+        
+        return partita;
     }
 }
 

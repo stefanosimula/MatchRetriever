@@ -14,7 +14,7 @@ public class Partita {
     private String      girone;
     private Boolean     andata;
     private String      turno;
-    int                 numeroGara;
+    private String      numeroGara;
     private String     squadraA;
     private String     squadraB;
     private int         puntiA;
@@ -32,7 +32,7 @@ public class Partita {
     private String      provvedimenti;
 
     public Partita(String id, String comitato, String regione, String provincia, String campionato, Sesso sesso, String fase,
-                   String girone, Boolean andata, String turno, int numeroGara, String squadraA, String squadraB,
+                   String girone, Boolean andata, String turno, String numeroGara, String squadraA, String squadraB,
                    int puntiA, int puntiB, String campo, Date data, Time ora, String arbitro1, String arbitro2,
                    String arbitro3, String osservatore, String udc1, String udc2, String udc3, String provvedimenti) {
     	this.id = id;
@@ -67,7 +67,7 @@ public class Partita {
         		" Sesso "+sesso+" Fase "+fase+" Girone "+girone+" Andata "+andata+" Turno "+turno+ " NumeroGara " + numeroGara + " Squadra A " + squadraA + " Squadra B " + squadraB;
     }
     
-    public int getNumeroGara() {
+    public String getNumeroGara() {
     	return numeroGara;
     }
     
@@ -86,21 +86,37 @@ public class Partita {
     public String getArbitro1() {
         return arbitro1;
     }
+    
+    public void setArbitro1(String arbitro1) {
+    	this.arbitro1 = arbitro1;
+    }
 
     public String getArbitro2() {
         return arbitro2;
+    }
+    
+    public void setArbitro2(String arbitro2) {
+    	this.arbitro2 = arbitro2;
     }
 
     public String getArbitro3() {
         return arbitro3;
     }
 
+    public void setArbitro3(String arbitro3) {
+    	this.arbitro3 = arbitro3;
+    }
+    
     public String getCampionato() {
         return campionato;
     }
-
+    
     public String getCampo() {
         return campo;
+    }
+    
+    public void setCampo(String campo) {
+    	this.campo = campo;
     }
 
     public String getComitato() {
@@ -131,6 +147,10 @@ public class Partita {
         return osservatore;
     }
 
+    public void setOsservatore(String osservatore) {
+    	this.osservatore = osservatore;
+    }
+    
     public String getProvincia() {
         return provincia;
     }
@@ -163,14 +183,25 @@ public class Partita {
         return udc1;
     }
     
+    public void setUdC1(String udc1) {
+    	this.udc1 = udc1;
+    }
+    
     public String getUdC2() {
         return udc2;
+    }
+
+    public void setUdC2(String udc2) {
+    	this.udc2 = udc2;
     }
     
     public String getUdC3() {
         return udc3;
     }
     
+    public void setUdC3(String udc3) {
+    	this.udc3 = udc3;
+    }
 }
 
 

@@ -209,7 +209,8 @@ public class WPUtils {
 			String campionato, fase, girone, turno;
 			Sesso sesso;
 			Boolean andata;
-			int numeroGara, puntiA, puntiB;
+			String numeroGara;
+			int puntiA, puntiB;
 			String squadraA, squadraB;
 			String arbitro1, arbitro2, arbitro3, osservatore, udc1, udc2, udc3;
 			String data, ora, campo, provvedimenti;
@@ -229,7 +230,7 @@ public class WPUtils {
 				andata = (String) customFields.get(WP_ANDATA) == "0";
 				turno = (String) customFields.get(WP_TURNO);
 
-				numeroGara = Integer.parseInt((String) customFields.get(WP_NUMERO_GARA));
+				numeroGara = (String) customFields.get(WP_NUMERO_GARA);
 				squadraA = (String) customFields.get(WP_SQUADRA_A);
 				squadraB = (String) customFields.get(WP_SQUADRA_B);
 				puntiA = Integer.parseInt((String) customFields.get(WP_PUNTI_SQUADRA_A));

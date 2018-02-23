@@ -1,5 +1,6 @@
 package Utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Data.Objects.Campionato;
@@ -21,15 +22,30 @@ public class Utils {
     public static List<Partita> GetAllGamesFromWEB(Campionato championship) {
     	
     	String htmlGetPartiteResult = FIPWebHelper.GetPartite(championship);
-    	List<Partita> result = FIPWebParser.ParseGetPartiteResult(htmlGetPartiteResult);
+    	List<Partita> gamesRecap = FIPWebParser.ParseGetPartiteResult(htmlGetPartiteResult);
     	
-    	return result;
+    	Partita gameDetails;
+    	for(int i = 0; i < gamesRecap.size(); i++) {
+    		gameDetails = GetGameDetailsFromWEB(gamesRecap.get(i));
+    		
+    		gamesRecap.get(i).setArbitro1(gameDetails.getArbitro1());
+    		gamesRecap.get(i).setArbitro2(gameDetails.getArbitro2());
+    		gamesRecap.get(i).setArbitro3(gameDetails.getArbitro3());
+    		gamesRecap.get(i).setOsservatore(gameDetails.getOsservatore());
+    		
+    		gamesRecap.get(i).setUdC1(gameDetails.getUdC1());
+    		gamesRecap.get(i).setUdC2(gameDetails.getUdC2());
+    		gamesRecap.get(i).setUdC3(gameDetails.getUdC3());
+    		
+    		gamesRecap.get(i).setCampo(gameDetails.getCampo());
+        }
+    	    	
+    	return gamesRecap;
     }
     
-    public static Partita GetGameDetailsFromWEB(String comitato,  String regione, String provincia, String sesso, 
-    		String campionato, String fase, String girone, Boolean andata, String turno, int numeroGara) {
+    private static Partita GetGameDetailsFromWEB(Partita game) {
     	
-    	String htmlGetPartiteResult = FIPWebHelper.GetDettaglioPartita(comitato, regione, provincia, sesso, campionato, fase, girone, andata, turno, numeroGara);
+    	String htmlGetPartiteResult = FIPWebHelper.GetDettaglioPartita(game);
     	Partita result = FIPWebParser.ParseGetDettaglioPartitaResult(htmlGetPartiteResult);
     	
     	return result;

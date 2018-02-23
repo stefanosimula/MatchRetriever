@@ -3,6 +3,7 @@ package Utils.FIPWeb;
 import java.util.Date;
 
 import Data.Objects.Campionato;
+import Data.Objects.Partita;
 import Utils.HTTP.HTTPHelper;
 
 public class FIPWebHelper {
@@ -12,7 +13,8 @@ public class FIPWebHelper {
     private static String GetCampionatiUrl = "ajaxRisultatiGetMenuCampionati.aspx";
     private static String GetRisultatiUrl = "risultati.aspx";
     private static String GetPartiteUrl = "ajaxRisultatiGetPartite.aspx";
-    
+    private static String GetDettaglioPartitaUrl = "ajax-risultati-get-dettaglio-partita.aspx";
+        
     public static String GetCampionati(String comitato, String regione, String provincia) {
     	long time = new Date().getTime();
 
@@ -33,7 +35,7 @@ public class FIPWebHelper {
     }
     
     public static String GetRisultati(String regione, String comitato, String provincia) {
-    	String url = FipWebUrl + "/" + GetPartiteUrl + "?" +
+    	String url = FipWebUrl + GetPartiteUrl + "?" +
     			CreateGetPartiteUrl(regione, comitato, provincia);
 
     	return HTTPHelper.SendGet(url);
@@ -50,7 +52,7 @@ public class FIPWebHelper {
     // &camp=D&fase=1&girone=25770&ar=0&turno=2&IDRegione=TO&IDProvincia=FI&reload=undefined
 
     public static String GetPartite(Campionato championship) {
-        String url = FipWebUrl + "/" + GetPartiteUrl + "?" +
+        String url = FipWebUrl + GetPartiteUrl + "?" +
                 CreateGetPartiteUrl(championship);
 
         return HTTPHelper.SendGet(url);
@@ -66,13 +68,22 @@ public class FIPWebHelper {
 
     }
     
-    public static String GetDettaglioPartita(String comitato,  String regione, String provincia, 
-    		String sesso, String campionato, String fase, String girone, Boolean andata, String turno, int numeroGara) {
-		String url = FipWebUrl + "/" + GetPartiteUrl + "?" + "com="+comitato+"&sesso="+sesso+"&camp="+campionato+"&fase="+fase+
-                "&girone="+girone+"&ar="+(andata ? 0 : 1)+"&turno="+turno+"&IDRegione="+regione+
-                "&IDProvincia="+provincia+"&IDGara="+numeroGara;
+    public static String GetDettaglioPartita(Partita game) {
+    	long time = new Date().getTime();
+    	//http://www.fip.it/ajax-risultati-get-dettaglio-partita.aspx?1519400344476
+		String url = FipUrl + GetDettaglioPartitaUrl + "?" + time +
+				"&com="+game.getComitato()+
+				"&sesso="+game.getSesso()+
+				"&camp="+game.getCampionato()+
+				"&fase="+game.getFase()+
+                "&girone="+game.getGirone()+
+                "&ar="+(game.getAndata() ? 0 : 1)+
+                "&turno="+game.getTurno()+
+                "&IDRegione="+game.getRegione()+
+                "&IDProvincia="+game.getProvincia()+
+                "&IDGara="+game.getNumeroGara()+
+                "&reload=";
 		
-		
-		return HTTPHelper.SendGet(url);
+		return HTTPHelper.SendPost(url);
 	}
 }
