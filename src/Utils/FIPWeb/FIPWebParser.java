@@ -90,8 +90,8 @@ public class FIPWebParser {
         int                numeroGara;
         int puntiA = 0, puntiB = 0;
         String            squadraA, squadraB;
-        Date               data;
-        Time               ora;
+        Date               date;
+        Time               time;
         Element            row, row2;
         
         if(htmlGetPartiteResult.isEmpty()) {
@@ -234,17 +234,17 @@ public class FIPWebParser {
             String[] tmp       = matchDateTimeCols.get(0).text().split(" - ");
             String[] dataElems = tmp[0].split("-");
 
-            data = new Date(Integer.parseInt(dataElems[2]),
-                            Integer.parseInt(dataElems[1]),
+            date = new Date(Integer.parseInt(dataElems[2]) - 1900,
+                            Integer.parseInt(dataElems[1]) - 1,
                             Integer.parseInt(dataElems[0]));
 
             String[] timeElems = tmp[1].split(":");
 
-            ora = new Time(Integer.parseInt(timeElems[0]), Integer.parseInt(timeElems[1]), 0);
+            time = new Time(Integer.parseInt(timeElems[0]), Integer.parseInt(timeElems[1]), 0);
 
             
-            partita = new Partita(comitato, regione, provincia, campionato, sesso, fase, girone, andata, turno, 
-            		numeroGara, squadraA, squadraB, puntiA, puntiB, "", data, ora, 
+            partita = new Partita("", comitato, regione, provincia, campionato, sesso, fase, girone, andata, turno, 
+            		numeroGara, squadraA, squadraB, puntiA, puntiB, "", date, time, 
             		arbitro1, arbitro2, arbitro3, "", "", "", "", "");
 
             games.add(partita);

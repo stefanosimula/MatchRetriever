@@ -82,7 +82,7 @@ public class MatchRetriever {
         			logger.Log(MatchRetriever.class.getName(), "", "Game created: ["+gameOnFIP+"]", LogLevel.INFO);
         		}
         		else { // The game is already on the WP Site -> Update game 
-        			//Utils.UpdateGameOnDB(comitato, regione, provincia, sesso, campionato, fase, girone, andata, turno, numeroGara, squadraA, squadraB, puntiSquadraA, puntiSquadraB, Campo, data, ora, arbitro1, arbitro2, arbitro3, osservatore, udc1, udc2, udc3);
+        			Utils.UpdateGameOnDB(gameOnFIP);
         			
         			logger.Log(MatchRetriever.class.getName(), "", "Game updated: ["+gameOnFIP+"]", LogLevel.INFO);
         		}
@@ -96,56 +96,5 @@ public class MatchRetriever {
         
         
         logger.Log(MatchRetriever.class.getName(), "", "***** MATCH RETRIEVER STOP *****", LogLevel.DEBUG);
-        
-        //WPUtils.SaveGame(1243, "","");
-
-        
-    	//FIPWebHelper.GetPartite(comitato, sesso, campionato, fase, girone, andata, turno, regione, provincia)
-    	//String content = Utils.GetWebPage("http://www.fip.it/FipWeb/ajax-risultati-get-navbar-campionati.aspx?"+time);
-    	//String content = Utils.GetWebPage("http://www.fip.it/FipWeb/ajaxRisultatiGetPartite.aspx?"+time+"&com=RTO&sesso=M&camp=D&fase=1&girone=25770&ar=0&turno=2&IDRegione=TO&IDProvincia=FI&reload=undefined");
-        /*
-        for all Regioni
-            for all provincia in regione
-                for all comitato
-                    retrieve partite
-                    parsa risultato e ottieni le partite
-
-                    for all partite
-                        getPartitaDettaglio
-                            if(partita in DB)
-                                Aggiorna Partita
-                            else
-                                Inserisci partita nel DB
-
-         */
-        
-        //////////////////////////////////////////////////////////////////////////
-        
-        /*
-        long time = new Date().getTime();
-        // http://www.fip.it/FipWeb/ajaxRisultatiGetPartite.aspx?1617576752999&com=RTO&sesso=M&camp=D&fase=1&girone=25770&ar=0&turno=2&IDRegione=TO&IDProvincia=FI&reload=undefined
-        String content = Utils.GetWebPage("http://www.fip.it/FipWeb/ajaxRisultatiGetPartite.aspx?"+time+"&com=RTO&sesso=M&camp=D&fase=1&girone=25770&ar=0&turno=2&IDRegione=TO&IDProvincia=FI&reload=undefined");
-        System.out.println(content);
-
-        String everything = "";
-        BufferedReader br = new BufferedReader(new FileReader("./Utils/GetPartiteResult.html"));
-        try {
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-
-            while (line != null) {
-                sb.append(line);
-                sb.append(System.lineSeparator());
-                line = br.readLine();
-            }
-            everything = sb.toString();
-        } finally {
-            br.close();
-        }
-
-        FIPWebParser.ParseGetPartiteResult(everything);
-         */
-        
-        
     }
 }

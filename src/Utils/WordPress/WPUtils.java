@@ -10,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
@@ -31,6 +32,7 @@ public class WPUtils {
 	public static final String WP_PSS = "Eugenio27!";
 
 	public static final String WP_ACF_SEC = "acf";
+	public static final String WP_ID = "id";
 	public static final String WP_COMITATO = "comitato";
 	public static final String WP_REGIONE = "regione";
 	public static final String WP_PROVINCIA = "provincia";
@@ -153,15 +155,15 @@ public class WPUtils {
 		WPLogger logger = WPLogger.getInstance();
 
 		try {
-			logger.Log(WPUtils.class.getName(), logger.GetMethodName(),
-					"Search this game: [" + game.getComitato() + " " + game.getProvincia() + " " + game.getNumeroGara() + "]", LogLevel.INFO);
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Search this game: [" + game.getComitato() + " "
+					+ game.getProvincia() + " " + game.getNumeroGara() + "]", LogLevel.INFO);
 
-			URL url = new URL(URL_BASE + "?slug=" + game.getComitato() + "_" + game.getNumeroGara() + "_" + game.getNumeroGara());
+			URL url = new URL(
+					URL_BASE + "?slug=" + game.getComitato() + "_" + game.getProvincia() + "_" + game.getNumeroGara());
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
-			logger.Log(WPUtils.class.getName(), logger.GetMethodName(),
-					"URL: [" + url + "]", LogLevel.INFO);
-			
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "URL: [" + url + "]", LogLevel.INFO);
+
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
 
@@ -194,6 +196,7 @@ public class WPUtils {
 		return gameJSON;
 	}
 
+	@SuppressWarnings("deprecation")
 	private static Partita ParseGetGameJSON(String getGameJSON) {
 		Partita partita = null;
 
@@ -202,7 +205,7 @@ public class WPUtils {
 		try {
 			jsonObjects = (JSONArray) jsonParser.parse(getGameJSON);
 
-			String comitato, regione, provincia;
+			String id, comitato, regione, provincia;
 			String campionato, fase, girone, turno;
 			Sesso sesso;
 			Boolean andata;
@@ -215,6 +218,7 @@ public class WPUtils {
 				JSONObject jsonObj = (JSONObject) jsonObjects.get(0);
 				JSONObject customFields = (JSONObject) jsonObj.get(WP_ACF_SEC);
 
+				id = jsonObj.get(WP_ID).toString();
 				comitato = (String) customFields.get(WP_COMITATO);
 				regione = (String) customFields.get(WP_REGIONE);
 				provincia = (String) customFields.get(WP_PROVINCIA);
@@ -238,23 +242,24 @@ public class WPUtils {
 				udc2 = (String) customFields.get(WP_UDC_2);
 				udc3 = (String) customFields.get(WP_UDC_3);
 				provvedimenti = (String) customFields.get(WP_PROVVEDIMENTI);
-				
-				// TOPARSE
-				data = (String) customFields.get(WP_DATA);
-				ora = (String) customFields.get(WP_ORA);
+
 				campo = (String) customFields.get(WP_CAMPO);
+				
+				data = (String) customFields.get(WP_DATA);
+				String[] dataSplit = data.split("/");
+				
+				Date date = new Date(Integer.parseInt(dataSplit[2]) - 1900,
+                        Integer.parseInt(dataSplit[1]) - 1,
+                        Integer.parseInt(dataSplit[0]));
 
 				
-				/*data = new Date(Integer.parseInt(dataElems[2]),
-                        Integer.parseInt(dataElems[1]),
-                        Integer.parseInt(dataElems[0]));
-				*/
-        
-
-				//ora = new Time(Integer.parseInt(timeElems[0]), Integer.parseInt(timeElems[1]), 0);
+				ora = (String) customFields.get(WP_ORA);
+				String[] timeSplit = ora.split(":");
 				
-				partita = new Partita(comitato, regione, provincia, campionato, sesso, fase, girone, andata, turno,
-						numeroGara, squadraA, squadraB, puntiA, puntiB, campo, null, null, arbitro1, arbitro2, arbitro3,
+				Time time = new Time(Integer.parseInt(timeSplit[0]), Integer.parseInt(timeSplit[1]), 0);
+
+				partita = new Partita(id, comitato, regione, provincia, campionato, sesso, fase, girone, andata, turno,
+						numeroGara, squadraA, squadraB, puntiA, puntiB, campo, date, time, arbitro1, arbitro2, arbitro3,
 						osservatore, udc1, udc2, udc3, provvedimenti);
 			}
 
@@ -266,11 +271,80 @@ public class WPUtils {
 		return partita;
 	}
 
+	public static boolean UpdateGame(String id, Partita game) {
+		boolean result = false;
+		WPLogger logger = WPLogger.getInstance();
+
+		try {
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Trying to update game: [" + game + "]",
+					LogLevel.INFO);
+
+			JSONObject gameJSON = CreateJSONGame4WP(game);
+			String strUpdateRes = UpdateJSONOnWP(id, gameJSON);
+			
+			result = strUpdateRes.isEmpty();
+		} catch (NullPointerException ex) {
+			ex.printStackTrace();
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "FAILED - Null Pointer Exception",
+					LogLevel.ERROR);
+		}
+
+		logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Games updated correctly", LogLevel.INFO);
+		
+		return result;
+	}
+	
+	private static String UpdateJSONOnWP(String id, JSONObject gameJSON) {
+		WPLogger logger = WPLogger.getInstance();
+		String result = "";
+
+		try {
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Trying to add: [" + gameJSON + "]",
+					LogLevel.INFO);
+
+			URL url = new URL(URL_BASE+ "/" + id);
+			String authStr = WP_LOGIN + ":" + WP_PSS;
+			String encoding = Base64.getEncoder().encodeToString(authStr.getBytes());
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+			connection.setDoOutput(true);
+			connection.setRequestMethod("POST");
+			connection.setRequestProperty("Content-Type", "application/json");
+			connection.setRequestProperty("Authorization", "Basic " + encoding);
+
+			OutputStream os = connection.getOutputStream();
+
+			os.write(gameJSON.toJSONString().getBytes());
+			os.flush();
+
+			InputStream content = (InputStream) connection.getInputStream();
+			BufferedReader in = new BufferedReader(new InputStreamReader(content));
+			String line;
+
+			while ((line = in.readLine()) != null) {
+				System.out.println(line);
+			}
+
+			connection.disconnect();
+		} catch (MalformedURLException e) {
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(),
+					"FAILED - Malformed URL Exception : URL [" + URL_BASE + "]", LogLevel.ERROR);
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "FAILED - IO Exception", LogLevel.ERROR);
+			e.printStackTrace();
+		}
+
+		logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Complete : [" + result + "]", LogLevel.INFO);
+
+		return result;
+	}
+	
 	public static void SaveGame(Partita game) {
 		WPLogger logger = WPLogger.getInstance();
 
 		try {
-			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Trying to save game: [" +game+ "]",
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Trying to save game: [" + game + "]",
 					LogLevel.INFO);
 
 			JSONObject gameJSON = CreateJSONGame4WP(game);
@@ -293,40 +367,44 @@ public class WPUtils {
 		gameJSON.put("status", "publish");
 		gameJSON.put("type", "games");
 
-		JSONObject gameTitle = new JSONObject();
+		gameJSON.put("title", game.getComitato() + "_" + game.getProvincia() + "_" + game.getNumeroGara());
 
-		gameTitle.put("rendered", game.getComitato() + "_" + game.getProvincia() + "_" + game.getNumeroGara());
-		gameJSON.put("title", gameTitle);
+		JSONObject customFields = new JSONObject();
 
-		JSONObject acfObj = new JSONObject();
+		customFields.put(WP_COMITATO, game.getComitato());
+		customFields.put(WP_REGIONE, game.getRegione());
+		customFields.put(WP_PROVINCIA, game.getProvincia());
+		customFields.put(WP_CAMPIONATO, game.getCampionato());
+		customFields.put(WP_SESSO, game.getSesso().toString());
+		customFields.put(WP_FASE, game.getFase());
+		customFields.put(WP_GIRONE, game.getGirone());
+		customFields.put(WP_ANDATA, game.getAndata() ? 0 : 1);
+		customFields.put(WP_TURNO, game.getTurno());
 
-		acfObj.put(WP_COMITATO, game.getComitato());
-		acfObj.put(WP_REGIONE, game.getRegione());
-		acfObj.put(WP_PROVINCIA, game.getProvincia());
-		acfObj.put(WP_CAMPIONATO, game.getCampionato());
-		acfObj.put(WP_SESSO, game.getSesso().toString());
-		acfObj.put(WP_FASE, game.getFase());
-		acfObj.put(WP_GIRONE, game.getGirone());
-		acfObj.put(WP_ANDATA, game.getAndata() ? 0 : 1);
-		acfObj.put(WP_TURNO, game.getTurno());
+		customFields.put(WP_NUMERO_GARA, game.getNumeroGara());
+		customFields.put(WP_SQUADRA_A, game.getSquadraA());
+		customFields.put(WP_SQUADRA_B, game.getSquadraB());
+		customFields.put(WP_PUNTI_SQUADRA_A, game.getPuntiA());
+		customFields.put(WP_PUNTI_SQUADRA_B, game.getPuntiB());
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		String sDate= dateFormat.format(game.getData());
+		customFields.put(WP_DATA, sDate);
+		
+		SimpleDateFormat dateTime = new SimpleDateFormat("HH:mm");
+		String sTime= dateTime.format(game.getOra());
+		customFields.put(WP_ORA, sTime);
+		
+		customFields.put(WP_CAMPO, game.getCampo());
+		customFields.put(WP_ARBITRO_1, game.getArbitro1());
+		customFields.put(WP_ARBITRO_2, game.getArbitro2());
+		customFields.put(WP_ARBITRO_3, game.getArbitro3());
+		customFields.put(WP_UDC_1, game.getUdC1());
+		customFields.put(WP_UDC_2, game.getUdC2());
+		customFields.put(WP_UDC_3, game.getUdC3());
+		customFields.put(WP_PROVVEDIMENTI, game.getProvvedimenti());
 
-		acfObj.put(WP_NUMERO_GARA, game.getNumeroGara());
-		acfObj.put(WP_SQUADRA_A, game.getSquadraA());
-		acfObj.put(WP_SQUADRA_B, game.getSquadraB());
-		acfObj.put(WP_PUNTI_SQUADRA_A, game.getPuntiA());
-		acfObj.put(WP_PUNTI_SQUADRA_B, game.getPuntiB());
-		acfObj.put(WP_DATA, game.getData());
-		acfObj.put(WP_ORA, game.getOra());
-		acfObj.put(WP_CAMPO, game.getCampo());
-		acfObj.put(WP_ARBITRO_1, game.getArbitro1());
-		acfObj.put(WP_ARBITRO_2, game.getArbitro2());
-		acfObj.put(WP_ARBITRO_3, game.getArbitro3());
-		acfObj.put(WP_UDC_1, game.getUdC1());
-		acfObj.put(WP_UDC_2, game.getUdC2());
-		acfObj.put(WP_UDC_3, game.getUdC3());
-		acfObj.put(WP_PROVVEDIMENTI, game.getProvvedimenti());
-
-		gameJSON.put("acf", acfObj);
+		gameJSON.put("fields", customFields);
 
 		return gameJSON;
 	}

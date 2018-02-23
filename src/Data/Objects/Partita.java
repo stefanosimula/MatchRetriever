@@ -31,11 +31,11 @@ public class Partita {
     private Time        ora;
     private String      provvedimenti;
 
-    public Partita(String comitato, String regione, String provincia, String campionato, Sesso sesso, String fase,
+    public Partita(String id, String comitato, String regione, String provincia, String campionato, Sesso sesso, String fase,
                    String girone, Boolean andata, String turno, int numeroGara, String squadraA, String squadraB,
                    int puntiA, int puntiB, String campo, Date data, Time ora, String arbitro1, String arbitro2,
                    String arbitro3, String osservatore, String udc1, String udc2, String udc3, String provvedimenti) {
-    	
+    	this.id = id;
     	this.comitato = comitato;
         this.regione = regione;
         this.provincia = provincia;
@@ -60,8 +60,6 @@ public class Partita {
         this.udc2 = udc2;
         this.udc3 = udc3;
         this.provvedimenti = provvedimenti;
-        
-        id         = comitato + "_" + provincia + "_" + numeroGara;
     }
 
     public String toString() {
