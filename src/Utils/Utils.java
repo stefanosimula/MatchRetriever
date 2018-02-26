@@ -1,6 +1,5 @@
 package Utils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import Data.Objects.Campionato;
@@ -38,6 +37,8 @@ public class Utils {
     		gamesRecap.get(i).setUdC3(gameDetails.getUdC3());
     		
     		gamesRecap.get(i).setCampo(gameDetails.getCampo());
+    		
+    		gamesRecap.get(i).setProvvedimenti(gameDetails.getProvvedimenti());
         }
     	    	
     	return gamesRecap;

@@ -155,6 +155,10 @@ public class Partita {
         return provincia;
     }
 
+    public void setProvvedimenti(String provvedimenti) {
+    	this.provvedimenti = provvedimenti;
+    }
+    
     public String getProvvedimenti() {
         return provvedimenti;
     }

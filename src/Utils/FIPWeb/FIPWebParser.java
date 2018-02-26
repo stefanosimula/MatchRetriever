@@ -269,7 +269,7 @@ public class FIPWebParser {
         String             numeroGara;
         int puntiA = 0, puntiB = 0;
         String            squadraA, squadraB, campo;
-        String arbitro1, arbitro2, arbitro3, osservatore;
+        String arbitro1, arbitro2, arbitro3, osservatore = "";
         String udc1, udc2, udc3, provvedimenti = "";
         Date               date;
         Time               time;
@@ -365,41 +365,58 @@ public class FIPWebParser {
         	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find referees game information", LogLevel.ERROR);
         	return null;
         }
-        Element fieldReferee = rows.get(4);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
-        String strRefElement = fieldEl.text();
-        arbitro1 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
         
-        fieldReferee = rows.get(5);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
-        strRefElement = fieldEl.text();
-        arbitro2 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        int index = 4;
         
-        fieldReferee = rows.get(6);
+        Element fieldReferee = rows.get(index);
         // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
-        strRefElement = fieldEl.text();
-        arbitro3 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        String strRefElement = fieldReferee.text();
+        arbitro1 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        index++;
         
-        fieldReferee = rows.get(7);
+        fieldReferee = rows.get(index);
         // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
-        strRefElement = fieldEl.text();
-        osservatore = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        strRefElement = fieldReferee.text();
+        arbitro2 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        index++;
         
-        fieldReferee = rows.get(8);
+        fieldReferee = rows.get(index);
         // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
-        strRefElement = fieldEl.text();
-        udc1 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        strRefElement = fieldReferee.text();
+        arbitro3 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        index++;
         
-        fieldReferee = rows.get(9);
+        fieldReferee = rows.get(index);
         // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
-        strRefElement = fieldEl.text();
-        udc2 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
+        strRefElement = fieldReferee.text();
+        if(strRefElement.contains("Osservatore")) {
+        	osservatore = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());	
+        	index++;
+        }
         
-        fieldReferee = rows.get(10);
+        fieldReferee = rows.get(index);
         // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
-        strRefElement = fieldEl.text();
-        udc3 = strRefElement.substring(strRefElement.indexOf(":"), strRefElement.length());
-            
+        strRefElement = fieldReferee.text();
+        udc1 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        index++;
+        
+        fieldReferee = rows.get(index);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldReferee.text();
+        udc2 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        index++;
+        
+        fieldReferee = rows.get(index);
+        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
+        strRefElement = fieldReferee.text();
+        udc3 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        index++;
+        
+        if(rows.size() < 12) {
+	        fieldReferee = rows.get(index);
+	        strRefElement = fieldReferee.text();
+	        provvedimenti = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        }
             partita = new Partita("", "", "", "", "", Sesso.Maschile, "", "", true, "", 
             		numeroGara, squadraA, squadraB, puntiA, puntiB, campo, date, time, 
             		arbitro1, arbitro2, arbitro3, osservatore, udc1, udc2, udc3, provvedimenti);
