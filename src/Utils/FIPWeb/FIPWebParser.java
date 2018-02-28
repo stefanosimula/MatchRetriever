@@ -268,13 +268,12 @@ public class FIPWebParser {
         
         String             numeroGara;
         int puntiA = 0, puntiB = 0;
-        String            squadraA, squadraB, campo;
-        String arbitro1, arbitro2, arbitro3, osservatore = "";
-        String udc1, udc2, udc3, provvedimenti = "";
+        String            squadraA= "", squadraB = "", campo = "";
+        String arbitro1 = "", arbitro2= "", arbitro3= "", osservatore = "";
+        String udc1= "", udc2= "", udc3= "", provvedimenti = "";
         Date               date;
         Time               time;
-        Element            row, row2;
-        
+                
         if(htmlGetDettaglioPartitaResult.isEmpty()) {
         	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "htmlGetDettaglioPartitaResult is empty", LogLevel.INFO);
     		return null;
@@ -294,7 +293,9 @@ public class FIPWebParser {
         	return null;
         }
         
-        puntiA = Integer.parseInt(rows.get(0).text());
+        if(!rows.get(0).text().isEmpty()) {
+        	puntiA = Integer.parseInt(rows.get(0).text());	
+        }
         
         rows = table.getElementsByClass("nome-squadra nome-squadra-2");
         if(rows.size() == 0) {
@@ -310,7 +311,9 @@ public class FIPWebParser {
         	return null;
         }
         
-        puntiB = Integer.parseInt(rows.get(0).text());
+        if(!rows.get(0).text().isEmpty()) {
+        	puntiB = Integer.parseInt(rows.get(0).text());	
+        }
         
         rows = table.getElementsByClass("numero-partita");
         if(rows.size() == 0) {
@@ -326,7 +329,38 @@ public class FIPWebParser {
         	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find game information", LogLevel.ERROR);
         	return null;
         }
+        ///
         
+        for(int j = 0; j < rows.size(); j++) {
+        	Element row = rows.get(j);
+            String rowText = row.text();
+            
+            if(rowText.contains("Campo di gioco")) {
+            	campo = rowText.substring(rowText.indexOf(": ")+1, rowText.length());
+                campo = campo.replaceAll("&#39;", "");
+            }
+            else if(rowText.contains("1&deg; Arbitro")) {
+            	arbitro1 = rowText.substring(rowText.indexOf(": ")+1, rowText.length());
+            }
+            else if(rowText.contains("2&deg; Arbitro")) {
+            	arbitro2 = rowText.substring(rowText.indexOf(": ")+1, rowText.length());
+            }
+			else if(rowText.contains("3&deg; Arbitro")) {
+				arbitro3 = rowText.substring(rowText.indexOf(": ")+1, rowText.length());        	
+            }
+			else if(rowText.contains("Segnapunti")) {
+				udc1 = rowText.substring(rowText.indexOf(": ")+1, rowText.length());
+			}
+			else if(rowText.contains("Cronometrista")) {
+				udc2 = rowText.substring(rowText.indexOf(": ")+1, rowText.length());
+			}
+			else if(rowText.contains("24 Secondi")) {
+				udc3 = rowText.substring(rowText.indexOf(": ")+1, rowText.length());
+			}
+
+        }
+        
+        ///
         Element moreInfo = rows.get(0);
         Elements dateTimeInfo = moreInfo.getElementsByTag("strong");
         if(dateTimeInfo.size() == 0) {
@@ -347,7 +381,7 @@ public class FIPWebParser {
 
         time = new Time(Integer.parseInt(timeElems[0]), Integer.parseInt(timeElems[1]), 0);
         
-        
+        /*
         if(rows.size() < 4) {
         	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "WARNING: Not able to find field game information", LogLevel.ERROR);
         	return null;
@@ -356,9 +390,8 @@ public class FIPWebParser {
         Element fieldEl = rows.get(3);
         // <strong>Campo di gioco</strong>: PALASPORT &#39;B. MACCHIA&#39;, Via S. Allende  2 LIVORNO (LI)
         String strFieldElement = fieldEl.text();
-        System.out.println(strFieldElement);
-        campo = strFieldElement.substring(strFieldElement.indexOf(":"), strFieldElement.length());
-        // TODO clean string from special character
+        
+        campo = strFieldElement.substring(strFieldElement.indexOf(": ")+1, strFieldElement.length());
         campo = campo.replaceAll("&#39;", "");
         
         if(rows.size() < 11) {
@@ -375,19 +408,21 @@ public class FIPWebParser {
         index++;
         
         fieldReferee = rows.get(index);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
         strRefElement = fieldReferee.text();
         arbitro2 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
         index++;
         
         fieldReferee = rows.get(index);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
         strRefElement = fieldReferee.text();
-        arbitro3 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        
+        arbitro3 = "";
+        if(strRefElement.indexOf(": ") + 1 > strRefElement.length()) {
+        	arbitro3 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
+        	logger.Log(FIPWebParser.class.getName(), logger.GetMethodName(), "arbitro_3: founded ["+strRefElement+"]", LogLevel.DEBUG);
+        }
         index++;
         
         fieldReferee = rows.get(index);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
         strRefElement = fieldReferee.text();
         if(strRefElement.contains("Osservatore")) {
         	osservatore = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());	
@@ -395,26 +430,23 @@ public class FIPWebParser {
         }
         
         fieldReferee = rows.get(index);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
         strRefElement = fieldReferee.text();
         udc1 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
         index++;
         
         fieldReferee = rows.get(index);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
         strRefElement = fieldReferee.text();
         udc2 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
         index++;
         
         fieldReferee = rows.get(index);
-        // <strong>1&deg; Arbitro</strong>: CORSO MARCO di PISA (PI)
         strRefElement = fieldReferee.text();
         udc3 = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
         index++;
-        
-        if(rows.size() < 12) {
-	        fieldReferee = rows.get(index);
-	        strRefElement = fieldReferee.text();
+        */
+        if(rows.size() == 12) {
+	        Element fieldReferee = rows.get(11);
+	        String strRefElement = fieldReferee.text();
 	        provvedimenti = strRefElement.substring(strRefElement.indexOf(": ")+1, strRefElement.length());
         }
             partita = new Partita("", "", "", "", "", Sesso.Maschile, "", "", true, "", 

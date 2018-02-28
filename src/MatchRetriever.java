@@ -15,13 +15,12 @@ import Utils.Utils;
 
 public class MatchRetriever {
 	
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
     	WPLogger logger = WPLogger.getInstance();
     	
         logger.Log(MatchRetriever.class.getName(), "MAIN", "***** MATCH RETRIEVER START *****", LogLevel.DEBUG);
         
-        
-        //@TODO read line parameter in order to decide which kind of operation do
+        //TODO read line parameter in order to decide which kind of operation do
         
         logger.Log(MatchRetriever.class.getName(), "", "Start championships search... ", LogLevel.DEBUG);
 
@@ -53,7 +52,6 @@ public class MatchRetriever {
             {
         		championship = championships.get(i);
         		games.addAll(Utils.GetAllGamesFromWEB(championship));
-        		break;
             }
         }
         else {
@@ -73,13 +71,15 @@ public class MatchRetriever {
         		gameOnFIP = games.get(i);
         		
         		logger.Log(MatchRetriever.class.getName(), "MAIN", "Games ["+gameOnFIP.toString()+"]", LogLevel.DEBUG);
-        		
+        		       		
         		gameOnDB = Utils.GetGameFromDB(gameOnFIP);
         		
         		if(gameOnDB == null) { // The game does not available on WP -> Create a new Game
-        			Utils.CreateGame(gameOnFIP);
-      			
-        			logger.Log(MatchRetriever.class.getName(), "MAIN", "Game created: ["+gameOnFIP+"]", LogLevel.INFO);
+        			if(Utils.CreateGame(gameOnFIP)) {
+        				logger.Log(MatchRetriever.class.getName(), "MAIN", "Game created: ["+gameOnFIP+"]", LogLevel.INFO);	
+        			} else {
+        				logger.Log(MatchRetriever.class.getName(), "MAIN", "Game NOT created: ["+gameOnFIP+"]", LogLevel.ERROR);	
+        			}
         		}
         		else { // The game is already on the WP Site -> Update game 
         			Utils.UpdateGameOnDB(gameOnFIP);

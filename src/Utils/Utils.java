@@ -26,19 +26,20 @@ public class Utils {
     	Partita gameDetails;
     	for(int i = 0; i < gamesRecap.size(); i++) {
     		gameDetails = GetGameDetailsFromWEB(gamesRecap.get(i));
-    		
-    		gamesRecap.get(i).setArbitro1(gameDetails.getArbitro1());
-    		gamesRecap.get(i).setArbitro2(gameDetails.getArbitro2());
-    		gamesRecap.get(i).setArbitro3(gameDetails.getArbitro3());
-    		gamesRecap.get(i).setOsservatore(gameDetails.getOsservatore());
-    		
-    		gamesRecap.get(i).setUdC1(gameDetails.getUdC1());
-    		gamesRecap.get(i).setUdC2(gameDetails.getUdC2());
-    		gamesRecap.get(i).setUdC3(gameDetails.getUdC3());
-    		
-    		gamesRecap.get(i).setCampo(gameDetails.getCampo());
-    		
-    		gamesRecap.get(i).setProvvedimenti(gameDetails.getProvvedimenti());
+    		if(gameDetails != null) {
+    			gamesRecap.get(i).setArbitro1(gameDetails.getArbitro1());
+        		gamesRecap.get(i).setArbitro2(gameDetails.getArbitro2());
+        		gamesRecap.get(i).setArbitro3(gameDetails.getArbitro3());
+        		gamesRecap.get(i).setOsservatore(gameDetails.getOsservatore());
+        		
+        		gamesRecap.get(i).setUdC1(gameDetails.getUdC1());
+        		gamesRecap.get(i).setUdC2(gameDetails.getUdC2());
+        		gamesRecap.get(i).setUdC3(gameDetails.getUdC3());
+        		
+        		gamesRecap.get(i).setCampo(gameDetails.getCampo());
+        		
+        		gamesRecap.get(i).setProvvedimenti(gameDetails.getProvvedimenti());	
+    		}
         }
     	    	
     	return gamesRecap;
@@ -63,8 +64,8 @@ public class Utils {
     	return WPUtils.UpdateGame(oldGame.getID(), game);
     }
     
-    public static void CreateGame(Partita game) {
+    public static boolean CreateGame(Partita game) {
     	
-    	WPUtils.SaveGame(game);
+    	return WPUtils.SaveGame(game);
     }
 }

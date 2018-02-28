@@ -7,7 +7,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
+import java.net.Proxy;
 import java.net.URL;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
@@ -300,7 +302,7 @@ public class WPUtils {
 		String result = "";
 
 		try {
-			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Trying to add: [" + gameJSON + "]",
+			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Trying to update: [" + gameJSON + "]",
 					LogLevel.INFO);
 
 			URL url = new URL(URL_BASE+ "/" + id);
@@ -312,7 +314,7 @@ public class WPUtils {
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("Content-Type", "application/json");
 			connection.setRequestProperty("Authorization", "Basic " + encoding);
-
+			
 			OutputStream os = connection.getOutputStream();
 
 			os.write(gameJSON.toJSONString().getBytes());
@@ -334,23 +336,23 @@ public class WPUtils {
 		} catch (IOException e) {
 			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "FAILED - IO Exception", LogLevel.ERROR);
 			e.printStackTrace();
-		}
+		} 
 
 		logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Complete : [" + result + "]", LogLevel.INFO);
 
 		return result;
 	}
 	
-	public static void SaveGame(Partita game) {
+	public static boolean SaveGame(Partita game) {
 		WPLogger logger = WPLogger.getInstance();
-
+		boolean result = false;
 		try {
 			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Trying to save game: [" + game + "]",
 					LogLevel.INFO);
 
 			JSONObject gameJSON = CreateJSONGame4WP(game);
 
-			SetJSONOnWP(gameJSON);
+			result = !SetJSONOnWP(gameJSON).isEmpty();
 		} catch (NullPointerException ex) {
 			ex.printStackTrace();
 			logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "FAILED - Null Pointer Exception",
@@ -358,6 +360,7 @@ public class WPUtils {
 		}
 
 		logger.Log(WPUtils.class.getName(), logger.GetMethodName(), "Games Added correctly", LogLevel.INFO);
+		return result;
 	}
 
 	@SuppressWarnings({ "unchecked" })
@@ -373,6 +376,7 @@ public class WPUtils {
 		JSONObject customFields = new JSONObject();
 
 		customFields.put(WP_COMITATO, game.getComitato());
+		
 		customFields.put(WP_REGIONE, game.getRegione());
 		customFields.put(WP_PROVINCIA, game.getProvincia());
 		customFields.put(WP_CAMPIONATO, game.getCampionato());
@@ -381,7 +385,7 @@ public class WPUtils {
 		customFields.put(WP_GIRONE, game.getGirone());
 		customFields.put(WP_ANDATA, game.getAndata() ? 0 : 1);
 		customFields.put(WP_TURNO, game.getTurno());
-
+		
 		customFields.put(WP_NUMERO_GARA, game.getNumeroGara());
 		customFields.put(WP_SQUADRA_A, game.getSquadraA());
 		customFields.put(WP_SQUADRA_B, game.getSquadraB());
@@ -400,6 +404,7 @@ public class WPUtils {
 		customFields.put(WP_ARBITRO_1, game.getArbitro1());
 		customFields.put(WP_ARBITRO_2, game.getArbitro2());
 		customFields.put(WP_ARBITRO_3, game.getArbitro3());
+		
 		customFields.put(WP_UDC_1, game.getUdC1());
 		customFields.put(WP_UDC_2, game.getUdC2());
 		customFields.put(WP_UDC_3, game.getUdC3());
@@ -420,7 +425,11 @@ public class WPUtils {
 
 			URL url = new URL(URL_BASE);
 			String authStr = WP_LOGIN + ":" + WP_PSS;
-			String encoding = Base64.getEncoder().encodeToString(authStr.getBytes());
+			String encoding = new String(Base64.getEncoder().encodeToString(authStr.getBytes()));
+			            
+			//Proxy instance, proxy ip = 10.0.0.1 with port 8080
+			//Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.199.33", 8080));
+			//HttpURLConnection connection = (HttpURLConnection) url.openConnection(proxy);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 			connection.setDoOutput(true);
@@ -429,18 +438,24 @@ public class WPUtils {
 			connection.setRequestProperty("Authorization", "Basic " + encoding);
 
 			OutputStream os = connection.getOutputStream();
-
 			os.write(gameJSON.toJSONString().getBytes());
 			os.flush();
 
-			InputStream content = (InputStream) connection.getInputStream();
-			BufferedReader in = new BufferedReader(new InputStreamReader(content));
-			String line;
+			int status = connection.getResponseCode();
+			if(status < 400) {
+				InputStream content = (InputStream) connection.getInputStream();
+				BufferedReader in = new BufferedReader(new InputStreamReader(content));
+				String line;
 
-			while ((line = in.readLine()) != null) {
-				System.out.println(line);
+				while ((line = in.readLine()) != null) {
+					System.out.println(line);
+					result += line;	
+				}
+			} else {
+				logger.Log(WPUtils.class.getName(), logger.GetMethodName(),
+						"FAILED - Response code [" + status + "] Reason ["+connection.getResponseMessage()+"]", LogLevel.ERROR);
 			}
-
+			
 			connection.disconnect();
 		} catch (MalformedURLException e) {
 			logger.Log(WPUtils.class.getName(), logger.GetMethodName(),
